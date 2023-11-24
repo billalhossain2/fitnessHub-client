@@ -1,4 +1,5 @@
 import useTitle from "../../hooks/useTitle"
+import About from "./About/About"
 import Banner from "./Banner/Banner"
 import Blog from "./Blog/Blog"
 import Featured from "./Featured/Featured"
@@ -12,6 +13,7 @@ const Home = () => {
     <div>
       <Banner></Banner>
       <Featured></Featured>
+      <About></About>
       <Team></Team>
       <Blog></Blog>
       <NewsLetter></NewsLetter>
