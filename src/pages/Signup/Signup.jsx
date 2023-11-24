@@ -126,7 +126,7 @@ function Signup() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="bg-white p-8 rounded shadow-md w-96">
-        <h2 className="text-2xl font-semibold mb-4">Registration</h2>
+        <h2 className="text-2xl font-semibold mb-4">Signup</h2>
         <form onSubmit={handleSubmit}>
           <div className="mb-4 relative">
             <label htmlFor="name" className="block text-gray-600">
@@ -194,14 +194,14 @@ function Signup() {
           </div>
           <button
             type="submit"
-            className="w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600"
+            className="w-full bg-[#FF4D31] text-white py-2 px-4 rounded hover:bg-[#ff3131]"
           >
             Signup
           </button>
           <p className="text-center mt-2">
             Already have an account?{" "}
             <Link
-              className="text-[#3b4edb] font-semibold hover:font-bold hover:underline"
+              className="text-[#FF4D31] font-semibold hover:font-bold hover:underline"
               to="/login"
             >
               Login

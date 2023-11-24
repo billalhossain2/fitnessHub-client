@@ -114,7 +114,7 @@ function Login() {
             </div>
             {passwordError && <p className="text-red-500 text-sm">{passwordError}</p>}
           </div>
-          <button type="submit" className="w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">
+          <button type="submit" className="w-full bg-[#FF4D31] text-white py-2 px-4 rounded hover:bg-[#FF4D31">
             Login
           </button>
           <p className='text-center mt-2'>Dont't have an account? <Link className='text-[#3b4edb] font-semibold hover:font-bold hover:underline' to="/signup">Register</Link> </p>
