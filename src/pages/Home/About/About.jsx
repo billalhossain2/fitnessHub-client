@@ -15,7 +15,7 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 const About = () => {
   return (
-    <div className="py-16">
+    <div className="py-16 mt-10">
       <div className="container mx-auto">
         <h2 className="text-4xl font-bold text-center mb-8">About Us</h2>
         
@@ -50,19 +50,19 @@ const About = () => {
           </div>
 
           <div className="md:w-1/2">
-            <p className="text-gray-700 text-lg mb-4">
+            <p className="text-gray-500 text-lg mb-4">
               Welcome to FitnessHub, where fitness meets inspiration. Our mission is to empower individuals on their journey to a healthier and happier life.
             </p>
 
-            <p className="text-gray-700 text-lg mb-4">
+            <p className="text-gray-500 text-lg mb-4">
               At FitnessHub, we believe in a holistic approach to wellness. Whether you're a seasoned fitness enthusiast or just starting, we provide the tools, guidance, and community support you need to achieve your goals.
             </p>
 
-            <p className="text-gray-700 text-lg mb-4">
+            <p className="text-gray-500 text-lg mb-4">
               Our team of experienced trainers, nutritionists, and wellness experts are dedicated to helping you reach your full potential. We offer a variety of workout programs, nutrition plans, and expert advice to ensure a well-rounded and sustainable fitness journey.
             </p>
 
-            <p className="text-gray-700 text-lg mb-4">
+            <p className="text-gray-500 text-lg mb-4">
               Join us in creating a community where health and fitness thrive. Start your transformation today!
             </p>
           </div>
