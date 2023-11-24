@@ -85,7 +85,7 @@ const NavBar = () => {
           <div className="flex items-center md:gap-3 gap-1 border-r-[1px] border-r-solid border-r-gray-400 md:p-5 p-2">
             <img
               src="https://i.ibb.co/rkb9Wb3/fitness-transparent-logo.png"
-              alt="Job Fusion Logo"
+              alt="Fitness Hub Logo"
             />
             <h3 className="font-bold md:text-3xl">FitnessHub</h3>
           </div>
@@ -122,8 +122,8 @@ const NavBar = () => {
             <div className="flex items-center md:gap-3 gap-1 border-r-[1px] border-r-solid border-r-gray-400 md:p-5 p-2">
               <Link to="/">
                 <img
-                  src="https://i.ibb.co/JvYPn2V/fusion-logo.png"
-                  alt="Job Fusion Logo"
+                  src="https://i.ibb.co/rkb9Wb3/fitness-transparent-logo.png"
+                  alt="Fitness Hub"
                 />
               </Link>
               <h3 className="font-bold md:text-3xl">FitnessHub</h3>
