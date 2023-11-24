@@ -6,10 +6,12 @@ import { toast } from 'react-toastify';
 //icons
 import {AiOutlineMail} from "react-icons/ai"
 import {LiaKeySolid} from "react-icons/lia"
+import useTitle from '../../hooks/useTitle';
 
 //Pwd:billalHossain*76
 
 function Login() {
+  useTitle('FitnessHub | Login')
   const navigate = useNavigate()
   const from = useLocation()?.state?.from || "/";
   const [email, setEmail] = useState('');

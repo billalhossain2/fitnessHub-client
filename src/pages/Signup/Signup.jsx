@@ -6,8 +6,10 @@ import { AiOutlineMail, AiOutlineUserAdd } from "react-icons/ai";
 import { LiaKeySolid } from "react-icons/lia";
 import { HiOutlinePhotograph } from "react-icons/hi";
 import useAuth from "../../hooks/useAuth";
+import useTitle from "../../hooks/useTitle";
 
 function Signup() {
+  useTitle('FitnessHub | Signup')
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
