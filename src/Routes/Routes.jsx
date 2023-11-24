@@ -7,6 +7,10 @@ import Home from "../pages/Home/Home";
 import Login from "../pages/Login/Login";
 import SignUp from "../pages/Signup/Signup";
 import NotFound from "../pages/NotFound/NotFound";
+import Gallery from "../pages/Gallery/Gallery";
+import Trainer from "../pages/Trainer/Trainer";
+import Classes from "../pages/Classes/Classes";
+import Community from "../pages/Community/Community";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +21,22 @@ const router = createBrowserRouter([
       {
         path:"/",
         element:<Home></Home>
+      },
+      {
+        path:"/gallery",
+        element:<Gallery></Gallery>
+      },
+      {
+        path:"/trainer",
+        element:<Trainer></Trainer>
+      },
+      {
+        path:"/classes",
+        element:<Classes></Classes>
+      },
+      {
+        path:"/community",
+        element:<Community></Community>
       },
       {
         path:"/login",

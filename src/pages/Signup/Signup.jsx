@@ -17,8 +17,11 @@ function Signup() {
   const [passwordError, setPasswordError] = useState("");
   const [photoUrlError, setPhotoUrlError] = useState("");
 
+  const [processing, setProcessing] = useState(false);
+
   // User Context
-  const { user, signUpWithEmailPwd, updateUserProfile, signOutUser } = useAuth()
+  const { user, signUpWithEmailPwd, updateUserProfile, signOutUser } =
+    useAuth();
   const navigate = useNavigate();
 
   const handleNameChange = (e) => {
@@ -37,8 +40,9 @@ function Signup() {
     setPhotoUrl(e.target.value);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setProcessing(false)
 
     // Field validation
     setNameError("");
@@ -95,25 +99,17 @@ function Signup() {
     if (isValid) {
       // You can now submit the registration data
       console.log("Registration data:", { name, email, password, photoUrl });
-      signUpWithEmailPwd(email, password)
-        .then((user) => {
-          //Update user after registration success
-          updateUserProfile({ displayName: name, photoURL: photoUrl })
-            .then(() => {
-              //Logout user
-              signOutUser()
-                .then(() =>{
-                  toast.success("Registration success!", { autoClose: 1000 })
-                  navigate("/login");
-                }
-                )
-                .catch(() => toast.error(error.message, { autoClose: 1000 }));
-            })
-            .catch((error) => toast.error(message.error, { autoClose: 1000 }));
-        })
-        .catch((error) => {
-          toast.error(error.message, { autoClose: 1000 });
-        });
+      try {
+        setProcessing(true);
+        const signupResponse = await signUpWithEmailPwd(email, password);
+        const updateProfileResponse = await updateUserProfile(name, photoUrl);
+        const signOutResponse = await signOutUser();
+        setProcessing(false)
+        toast.success("Signup success!", { autoClose: 2000 });
+        navigate("/login")
+      } catch (error) {
+        toast.success(error.message, { autoClose: 2000 });
+      }
     }
   };
 
@@ -193,10 +189,13 @@ function Signup() {
             )}
           </div>
           <button
+            disabled={processing}
             type="submit"
-            className="w-full bg-[#FF4D31] text-white py-2 px-4 rounded hover:bg-[#ff3131]"
+            className="w-full bg-[#FF4D31] flex items-center justify-center text-white py-2 px-4 rounded hover:bg-[#ff3131]"
           >
-            Signup
+            {
+              processing ? <span className="loading loading-spinner text-white"></span> : <span>Signup</span>
+            }
           </button>
           <p className="text-center mt-2">
             Already have an account?{" "}
