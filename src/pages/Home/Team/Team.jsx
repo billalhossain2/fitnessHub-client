@@ -32,9 +32,6 @@ const teamData = [
   }
 ]
 
-
-
-
 const Team = () => {
   return (
     <>

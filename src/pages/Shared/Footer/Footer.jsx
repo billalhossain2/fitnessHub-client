@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <>
-    <footer className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 px-3 mt-20 p-3 md:gap-10 gap-16 bg-[#000000] text-white">
+    <footer className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 px-3 mt-20 p-3 md:gap-10 gap-16 bg-[#000000] text-white py-10">
       <aside className="space-y-3">
       <header className="text-white font-bold pb-5">ABOUT US</header>
         <img src="https://i.ibb.co/rkb9Wb3/fitness-transparent-logo.png" alt="Logo" />
