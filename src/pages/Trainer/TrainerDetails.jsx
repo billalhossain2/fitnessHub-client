@@ -1,7 +1,9 @@
 import React from 'react'
 import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
 import BookItem from './BookItem';
+import useTitle from '../../hooks/useTitle';
 const TrainerDetails = () => {
+  useTitle("FitnessHub | Trainer Details")
   return (
     <div>
        <div className='relative'>

@@ -10,9 +10,9 @@ import NotFound from "../pages/NotFound/NotFound";
 import Gallery from "../pages/Gallery/Gallery";
 import Trainer from "../pages/Trainer/Trainer";
 import Classes from "../pages/Classes/Classes";
-import Community from "../pages/Community/Community";
 import TrainerForm from "../pages/Trainer/TrainerForm";
 import TrainerDetails from "../pages/Trainer/TrainerDetails";
+import Forums from "../pages/Forums/Forums";
 
 const router = createBrowserRouter([
   {
@@ -45,8 +45,8 @@ const router = createBrowserRouter([
         element:<Classes></Classes>
       },
       {
-        path:"/community",
-        element:<Community></Community>
+        path:"/forums",
+        element:<Forums></Forums>
       },
       {
         path:"/login",
