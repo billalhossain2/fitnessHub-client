@@ -781,6 +781,7 @@ const Classes = () => {
   useTitle("FitnessHub | Classes");
   return (
     <div>
+      <h3 className="font-bold md:text-5xl text-3xl mt-10 mb-5">All Classes</h3>
       <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5">
          {
           classesData.map((classItem, index)=> <ClassCard key={index} classItem={classItem}></ClassCard>)

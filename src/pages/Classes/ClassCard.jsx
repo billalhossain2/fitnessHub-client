@@ -1,6 +1,7 @@
 import React from 'react'
 import { MdAccessTime } from "react-icons/md";
 import { SlCalender } from "react-icons/sl";
+import { Link } from 'react-router-dom';
 const ClassCard = ({classItem}) => {
   const {instructor, class_details, schedule} = classItem || {};
   return (
@@ -12,7 +13,9 @@ const ClassCard = ({classItem}) => {
       <p className='flex items-center gap-1'><SlCalender />{class_details.start_date}</p>
     </div>
     <p className='font-bold text-[18px] text-[#ff4c31b2]'>{class_details.price}</p>
-    <button className='px-3 py-1 rounded-md bg-[#FF4D31] text-white'>Join Now</button>
+    <Link to="/class-details">
+    <button className='px-3 py-1 rounded-md bg-[#FF4D31] text-white'>Show Details</button>
+    </Link>
 </div>
   )
 }

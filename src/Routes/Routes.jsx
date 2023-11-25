@@ -13,6 +13,8 @@ import Classes from "../pages/Classes/Classes";
 import TrainerForm from "../pages/Trainer/TrainerForm";
 import TrainerDetails from "../pages/Trainer/TrainerDetails";
 import Forums from "../pages/Forums/Forums";
+import InfiniteScrollUi from "../pages/InfiniteScroll/InfiniteScroll";
+import ClassDetails from "../pages/Classes/ClassDetails/ClassDetails";
 
 const router = createBrowserRouter([
   {
@@ -45,6 +47,10 @@ const router = createBrowserRouter([
         element:<Classes></Classes>
       },
       {
+        path:"/class-details",
+        element:<ClassDetails></ClassDetails>
+      },
+      {
         path:"/forums",
         element:<Forums></Forums>
       },
@@ -55,7 +61,11 @@ const router = createBrowserRouter([
       {
         path:"/signup",
         element:<SignUp></SignUp>
-      }
+      },
+      {
+        path:"/infinite-scroll",
+        element:<InfiniteScrollUi></InfiniteScrollUi>
+      },
     ]
   },
 

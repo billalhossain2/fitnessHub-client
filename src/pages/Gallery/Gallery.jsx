@@ -53,6 +53,42 @@ const galleryData = [
   },
   {
     "image": "https://i.ibb.co/SVnj5R6/meditation.png",
+    "exercise": "Flexibility Training",
+    "likes": 130,
+    "difficulty_level": "Intermediate"
+  },
+  {
+    "image": "https://i.ibb.co/tPX3Xr4/strength.jpg",
+    "exercise": "Powerlifting Basics",
+    "likes": 80,
+    "difficulty_level": "Advanced"
+  },
+  {
+    "image": "https://i.ibb.co/N7yYmJn/nutrition-muscle-building.jpg",
+    "exercise": "Tabata Workouts",
+    "likes": 170,
+    "difficulty_level": "Intermediate"
+  },
+  {
+    "image": "https://i.ibb.co/SVnj5R6/meditation.png",
+    "exercise": "Flexibility Training",
+    "likes": 130,
+    "difficulty_level": "Intermediate"
+  },
+  {
+    "image": "https://i.ibb.co/tPX3Xr4/strength.jpg",
+    "exercise": "Powerlifting Basics",
+    "likes": 80,
+    "difficulty_level": "Advanced"
+  },
+  {
+    "image": "https://i.ibb.co/N7yYmJn/nutrition-muscle-building.jpg",
+    "exercise": "Tabata Workouts",
+    "likes": 170,
+    "difficulty_level": "Intermediate"
+  },
+  {
+    "image": "https://i.ibb.co/SVnj5R6/meditation.png",
     "exercise": "Plyometric Exercises",
     "likes": 110,
     "difficulty_level": "Intermediate"
@@ -114,6 +150,390 @@ const galleryData = [
   {
     "image": "https://i.ibb.co/tPX3Xr4/strength.jpg",
     "exercise": "Sprint Intervals",
+    "likes": 130,
+    "difficulty_level": "Intermediate"
+  },
+  {
+    "image": "https://i.ibb.co/N7yYmJn/nutrition-muscle-building.jpg",
+    "exercise": "Rowing Machine Techniques",
+    "likes": 120,
+    "difficulty_level": "Intermediate"
+  },
+  {
+    "image": "https://i.ibb.co/HhHvzdN/fitness.jpg",
+    "exercise": "Functional Fitness for Everyday Life",
+    "likes": 180,
+    "difficulty_level": "Intermediate"
+  },
+  {
+    "image": "https://i.ibb.co/SVnj5R6/meditation.png",
+    "exercise": "Mindful Weightlifting",
+    "likes": 150,
+    "difficulty_level": "Intermediate"
+  },
+  {
+    "image": "https://i.ibb.co/tPX3Xr4/strength.jpg",
+    "exercise": "Sprint Intervals",
+    "likes": 130,
+    "difficulty_level": "Intermediate"
+  },
+  {
+    "image": "https://i.ibb.co/N7yYmJn/nutrition-muscle-building.jpg",
+    "exercise": "Rowing Machine Techniques",
+    "likes": 120,
+    "difficulty_level": "Intermediate"
+  },
+  {
+    "image": "https://i.ibb.co/HhHvzdN/fitness.jpg",
+    "exercise": "Functional Fitness for Everyday Life",
+    "likes": 180,
+    "difficulty_level": "Intermediate"
+  },
+  {
+    "image": "https://i.ibb.co/SVnj5R6/meditation.png",
+    "exercise": "Mindful Weightlifting",
+    "likes": 150,
+    "difficulty_level": "Intermediate"
+  },
+  {
+    "image": "https://i.ibb.co/tPX3Xr4/strength.jpg",
+    "exercise": "Sprint Intervals",
+    "likes": 130,
+    "difficulty_level": "Intermediate"
+  },
+  {
+    "image": "https://i.ibb.co/N7yYmJn/nutrition-muscle-building.jpg",
+    "exercise": "Rowing Machine Techniques",
+    "likes": 120,
+    "difficulty_level": "Intermediate"
+  },
+  {
+    "image": "https://i.ibb.co/HhHvzdN/fitness.jpg",
+    "exercise": "Functional Fitness for Everyday Life",
+    "likes": 180,
+    "difficulty_level": "Intermediate"
+  },
+  {
+    "image": "https://i.ibb.co/SVnj5R6/meditation.png",
+    "exercise": "Mindful Weightlifting",
+    "likes": 150,
+    "difficulty_level": "Intermediate"
+  },
+  {
+    "image": "https://i.ibb.co/tPX3Xr4/strength.jpg",
+    "exercise": "Sprint Intervals",
+    "likes": 130,
+    "difficulty_level": "Intermediate"
+  },
+  {
+    "image": "https://i.ibb.co/N7yYmJn/nutrition-muscle-building.jpg",
+    "exercise": "Rowing Machine Techniques",
+    "likes": 120,
+    "difficulty_level": "Intermediate"
+  },
+  {
+    "image": "https://i.ibb.co/HhHvzdN/fitness.jpg",
+    "exercise": "Functional Fitness for Everyday Life",
+    "likes": 180,
+    "difficulty_level": "Intermediate"
+  },
+  {
+    "image": "https://i.ibb.co/SVnj5R6/meditation.png",
+    "exercise": "Mindful Weightlifting",
+    "likes": 150,
+    "difficulty_level": "Intermediate"
+  },
+  {
+    "image": "https://i.ibb.co/tPX3Xr4/strength.jpg",
+    "exercise": "Sprint Intervals",
+    "likes": 130,
+    "difficulty_level": "Intermediate"
+  },
+  {
+    "image": "https://i.ibb.co/N7yYmJn/nutrition-muscle-building.jpg",
+    "exercise": "Rowing Machine Techniques",
+    "likes": 120,
+    "difficulty_level": "Intermediate"
+  },
+  {
+    "image": "https://i.ibb.co/HhHvzdN/fitness.jpg",
+    "exercise": "Battle Ropes",
+    "likes": 110,
+    "difficulty_level": "Intermediate"
+  },
+  {
+    "image": "https://i.ibb.co/SVnj5R6/meditation.png",
+    "exercise": "Kettlebell Snatches",
+    "likes": 140,
+    "difficulty_level": "Advanced"
+  },
+  {
+    "image": "https://i.ibb.co/tPX3Xr4/strength.jpg",
+    "exercise": "Jumping Jacks",
+    "likes": 120,
+    "difficulty_level": "Beginner"
+  },
+  {
+    "image": "https://i.ibb.co/N7yYmJn/nutrition-muscle-building.jpg",
+    "exercise": "Kickboxing Cardio",
+    "likes": 160,
+    "difficulty_level": "Intermediate"
+  },
+  {
+    "image": "https://i.ibb.co/HhHvzdN/fitness.jpg",
+    "exercise": "Bodyweight Squats",
+    "likes": 140,
+    "difficulty_level": "Beginner"
+  },
+  {
+    "image": "https://i.ibb.co/SVnj5R6/meditation.png",
+    "exercise": "Mindful Cycling",
+    "likes": 150,
+    "difficulty_level": "Intermediate"
+  },
+  {
+    "image": "https://i.ibb.co/tPX3Xr4/strength.jpg",
+    "exercise": "CrossFit WOD",
+    "likes": 170,
+    "difficulty_level": "Advanced"
+  },
+  {
+    "image": "https://i.ibb.co/N7yYmJn/nutrition-muscle-building.jpg",
+    "exercise": "Pilates Reformer",
+    "likes": 120,
+    "difficulty_level": "Advanced"
+  },
+  {
+    "image": "https://i.ibb.co/SVnj5R6/meditation.png",
+    "exercise": "Mindful Yoga",
+    "likes": 130,
+    "difficulty_level": "Intermediate"
+  },
+  {
+    "image": "https://i.ibb.co/HhHvzdN/fitness.jpg",
+    "exercise": "Stair Climbing",
+    "likes": 110,
+    "difficulty_level": "Intermediate"
+  },
+  {
+    "image": "https://i.ibb.co/N7yYmJn/nutrition-muscle-building.jpg",
+    "exercise": "Full Body Stretch",
+    "likes": 120,
+    "difficulty_level": "Beginner"
+  },
+  {
+    "image": "https://i.ibb.co/tPX3Xr4/strength.jpg",
+    "exercise": "Tabata Sprints",
+    "likes": 140,
+    "difficulty_level": "Advanced"
+  },
+  {
+    "image": "https://i.ibb.co/SVnj5R6/meditation.png",
+    "exercise": "Zumba Dance Workout",
+    "likes": 160,
+    "difficulty_level": "Intermediate"
+  },
+  {
+    "image": "https://i.ibb.co/HhHvzdN/fitness.jpg",
+    "exercise": "Mindful Climbing",
+    "likes": 120,
+    "difficulty_level": "Advanced"
+  },
+  {
+    "image": "https://i.ibb.co/N7yYmJn/nutrition-muscle-building.jpg",
+    "exercise": "Functional Core Training",
+    "likes": 130,
+    "difficulty_level": "Intermediate"
+  },
+  {
+    "image": "https://i.ibb.co/N7yYmJn/nutrition-muscle-building.jpg",
+    "exercise": "Rowing Machine Techniques",
+    "likes": 120,
+    "difficulty_level": "Intermediate"
+  },
+  {
+    "image": "https://i.ibb.co/HhHvzdN/fitness.jpg",
+    "exercise": "Battle Ropes",
+    "likes": 110,
+    "difficulty_level": "Intermediate"
+  },
+  {
+    "image": "https://i.ibb.co/SVnj5R6/meditation.png",
+    "exercise": "Kettlebell Snatches",
+    "likes": 140,
+    "difficulty_level": "Advanced"
+  },
+  {
+    "image": "https://i.ibb.co/tPX3Xr4/strength.jpg",
+    "exercise": "Jumping Jacks",
+    "likes": 120,
+    "difficulty_level": "Beginner"
+  },
+  {
+    "image": "https://i.ibb.co/N7yYmJn/nutrition-muscle-building.jpg",
+    "exercise": "Kickboxing Cardio",
+    "likes": 160,
+    "difficulty_level": "Intermediate"
+  },
+  {
+    "image": "https://i.ibb.co/HhHvzdN/fitness.jpg",
+    "exercise": "Bodyweight Squats",
+    "likes": 140,
+    "difficulty_level": "Beginner"
+  },
+  {
+    "image": "https://i.ibb.co/SVnj5R6/meditation.png",
+    "exercise": "Mindful Cycling",
+    "likes": 150,
+    "difficulty_level": "Intermediate"
+  },
+  {
+    "image": "https://i.ibb.co/tPX3Xr4/strength.jpg",
+    "exercise": "CrossFit WOD",
+    "likes": 170,
+    "difficulty_level": "Advanced"
+  },
+  {
+    "image": "https://i.ibb.co/N7yYmJn/nutrition-muscle-building.jpg",
+    "exercise": "Pilates Reformer",
+    "likes": 120,
+    "difficulty_level": "Advanced"
+  },
+  {
+    "image": "https://i.ibb.co/SVnj5R6/meditation.png",
+    "exercise": "Mindful Yoga",
+    "likes": 130,
+    "difficulty_level": "Intermediate"
+  },
+  {
+    "image": "https://i.ibb.co/HhHvzdN/fitness.jpg",
+    "exercise": "Stair Climbing",
+    "likes": 110,
+    "difficulty_level": "Intermediate"
+  },
+  {
+    "image": "https://i.ibb.co/N7yYmJn/nutrition-muscle-building.jpg",
+    "exercise": "Full Body Stretch",
+    "likes": 120,
+    "difficulty_level": "Beginner"
+  },
+  {
+    "image": "https://i.ibb.co/tPX3Xr4/strength.jpg",
+    "exercise": "Tabata Sprints",
+    "likes": 140,
+    "difficulty_level": "Advanced"
+  },
+  {
+    "image": "https://i.ibb.co/SVnj5R6/meditation.png",
+    "exercise": "Zumba Dance Workout",
+    "likes": 160,
+    "difficulty_level": "Intermediate"
+  },
+  {
+    "image": "https://i.ibb.co/HhHvzdN/fitness.jpg",
+    "exercise": "Mindful Climbing",
+    "likes": 120,
+    "difficulty_level": "Advanced"
+  },
+  {
+    "image": "https://i.ibb.co/N7yYmJn/nutrition-muscle-building.jpg",
+    "exercise": "Functional Core Training",
+    "likes": 130,
+    "difficulty_level": "Intermediate"
+  },
+  {
+    "image": "https://i.ibb.co/N7yYmJn/nutrition-muscle-building.jpg",
+    "exercise": "Rowing Machine Techniques",
+    "likes": 120,
+    "difficulty_level": "Intermediate"
+  },
+  {
+    "image": "https://i.ibb.co/HhHvzdN/fitness.jpg",
+    "exercise": "Battle Ropes",
+    "likes": 110,
+    "difficulty_level": "Intermediate"
+  },
+  {
+    "image": "https://i.ibb.co/SVnj5R6/meditation.png",
+    "exercise": "Kettlebell Snatches",
+    "likes": 140,
+    "difficulty_level": "Advanced"
+  },
+  {
+    "image": "https://i.ibb.co/tPX3Xr4/strength.jpg",
+    "exercise": "Jumping Jacks",
+    "likes": 120,
+    "difficulty_level": "Beginner"
+  },
+  {
+    "image": "https://i.ibb.co/N7yYmJn/nutrition-muscle-building.jpg",
+    "exercise": "Kickboxing Cardio",
+    "likes": 160,
+    "difficulty_level": "Intermediate"
+  },
+  {
+    "image": "https://i.ibb.co/HhHvzdN/fitness.jpg",
+    "exercise": "Bodyweight Squats",
+    "likes": 140,
+    "difficulty_level": "Beginner"
+  },
+  {
+    "image": "https://i.ibb.co/SVnj5R6/meditation.png",
+    "exercise": "Mindful Cycling",
+    "likes": 150,
+    "difficulty_level": "Intermediate"
+  },
+  {
+    "image": "https://i.ibb.co/tPX3Xr4/strength.jpg",
+    "exercise": "CrossFit WOD",
+    "likes": 170,
+    "difficulty_level": "Advanced"
+  },
+  {
+    "image": "https://i.ibb.co/N7yYmJn/nutrition-muscle-building.jpg",
+    "exercise": "Pilates Reformer",
+    "likes": 120,
+    "difficulty_level": "Advanced"
+  },
+  {
+    "image": "https://i.ibb.co/SVnj5R6/meditation.png",
+    "exercise": "Mindful Yoga",
+    "likes": 130,
+    "difficulty_level": "Intermediate"
+  },
+  {
+    "image": "https://i.ibb.co/HhHvzdN/fitness.jpg",
+    "exercise": "Stair Climbing",
+    "likes": 110,
+    "difficulty_level": "Intermediate"
+  },
+  {
+    "image": "https://i.ibb.co/N7yYmJn/nutrition-muscle-building.jpg",
+    "exercise": "Full Body Stretch",
+    "likes": 120,
+    "difficulty_level": "Beginner"
+  },
+  {
+    "image": "https://i.ibb.co/tPX3Xr4/strength.jpg",
+    "exercise": "Tabata Sprints",
+    "likes": 140,
+    "difficulty_level": "Advanced"
+  },
+  {
+    "image": "https://i.ibb.co/SVnj5R6/meditation.png",
+    "exercise": "Zumba Dance Workout",
+    "likes": 160,
+    "difficulty_level": "Intermediate"
+  },
+  {
+    "image": "https://i.ibb.co/HhHvzdN/fitness.jpg",
+    "exercise": "Mindful Climbing",
+    "likes": 120,
+    "difficulty_level": "Advanced"
+  },
+  {
+    "image": "https://i.ibb.co/N7yYmJn/nutrition-muscle-building.jpg",
+    "exercise": "Functional Core Training",
     "likes": 130,
     "difficulty_level": "Intermediate"
   },
