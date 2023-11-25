@@ -18,7 +18,6 @@ const Home = () => {
       <Blog></Blog>
       <NewsLetter></NewsLetter>
       <Testimonial></Testimonial>
-      <h3>Home Page</h3>
     </div>
   )
 }

@@ -14,7 +14,7 @@ const ClassCard = ({classItem}) => {
     </div>
     <p className='font-bold text-[18px] text-[#ff4c31b2]'>{class_details.price}</p>
     <Link to="/class-details">
-    <button className='px-3 py-1 rounded-md bg-[#FF4D31] text-white'>Show Details</button>
+    <button className='px-3 py-1 rounded-md bg-[#FF4D31] text-white mt-3'>Show Details</button>
     </Link>
 </div>
   )

@@ -5,6 +5,7 @@ import {
 } from "react-icons/md";
 import useTitle from "../../../hooks/useTitle";
 import { SlCalender } from "react-icons/sl";
+import { Link } from "react-router-dom";
 
 const ClassDetails = () => {
   useTitle("FitnessHub | Class Details");
@@ -51,8 +52,8 @@ const ClassDetails = () => {
       <hr />
 
       {/* Description section  */}
-      <div className="flex items-center gap-5 mt-5">
-        <div className="flex-1">
+      <div className="flex lg:flex-row flex-col-reverse items-center gap-5 mt-5">
+        <div className="lg:flex-1">
           <p className="mb-5">
             <span className="text-6xl text-[#448C74] font-bold">F</span>itness training is a crucial aspect of maintaining a healthy and
             active lifestyle. It involves a structured regimen of physical
@@ -87,7 +88,7 @@ const ClassDetails = () => {
           </p>
         </div>
 
-        <div className="border-[1px] border-gray-500 p-10 rounded-2xl bg-[#448C74] min-w-[300px]">
+        <div className="border-[1px] border-gray-500 p-10 rounded-2xl bg-[#448C74] lg:w-[300px] w-full">
           <h3 className="text-[#DEC267] font-bold text-[18px]">
             Date and Time
           </h3>
@@ -101,9 +102,11 @@ const ClassDetails = () => {
             Event Category
           </h3>
           <p className="text-white font-medium my-2">Cardio Blast</p>
+          <Link to="/trainer">
           <button className="px-4 py-2 border-[1px] border-white hover:bg-[#FF4D31] hover:border-[#FF4D31] duration-300 rounded-lg mt-10 text-white">
             Join Now
           </button>
+          </Link>
         </div>
       </div>
     </div>

@@ -74,7 +74,7 @@ const TrainerForm = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto mt-8 p-6 bg-white rounded-md shadow-md border-2 border-[#ff4c314d]">
+    <div className="md:w-[700px] w-full mx-auto mt-8 p-6 bg-white rounded-md shadow-md border-2 border-[#ff4c314d]">
       {console.log("times========> ", formData)}
       <h2 className="text-2xl font-bold mb-4">Trainer Application Form</h2>
       <form onSubmit={handleSubmit}>

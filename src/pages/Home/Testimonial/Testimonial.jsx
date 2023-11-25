@@ -14,34 +14,30 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 const testimonialData = [
   {
-    name: "Jessica Thompson",
-    rating: 5,
-    testimonial:
-      "I've been a part of this fitness community for a year now, and it has been an amazing journey. The trainers are knowledgeable, the workouts are challenging yet fun, and the support from other members is incredible. Highly recommend!",
-    image: "https://i.ibb.co/yQ3Xcn3/client.jpg",
+    "name": "Jessica Thompson",
+    "rating": 5,
+    "testimonial":"I've been a part of this fitness community for a year now, and it has been an amazing journey. The trainers are knowledgeable, the workouts are challenging yet fun, and the support from other members is incredible. Highly recommend!",
+    "image": "https://i.ibb.co/yQ3Xcn3/client.jpg",
   },
   {
-    name: "Ryan Williams",
-    rating: 4,
-    testimonial:
-      "Great variety of workout classes and programs. The nutrition tips have been a game-changer for me. The app is user-friendly, and the trainers are always available for questions. Overall, a fantastic fitness resource.",
-    image: "https://i.ibb.co/yQ3Xcn3/client.jpg",
+    "name": "Ryan Williams",
+    "rating": 4,
+    "testimonial":"Great variety of workout classes and programs. The nutrition tips have been a game-changer for me. The app is user-friendly, and the trainers are always available for questions. Overall, a fantastic fitness resource.",
+    "image": "https://i.ibb.co/yQ3Xcn3/client.jpg",
   },
   {
-    name: "Megan Carter",
-    rating: 5,
-    testimonial:
-      "I love the holistic approach to wellness on this platform. The yoga sessions have helped me with flexibility and stress relief. The team is supportive, and the community challenges keep me motivated. So glad I found this!",
-    image: "https://i.ibb.co/yQ3Xcn3/client.jpg",
+    "name": "Megan Carter",
+    "rating": 5,
+    "testimonial":"I love the holistic approach to wellness on this platform. The yoga sessions have helped me with flexibility and stress relief. The team is supportive, and the community challenges keep me motivated. So glad I found this!",
+    "image": "https://i.ibb.co/yQ3Xcn3/client.jpg",
   },
   {
-    name: "Chris Rodriguez",
-    rating: 4,
-    testimonial:
-      "The nutritionist's advice has been invaluable in helping me make healthier food choices. The blog section is informative, and the team is responsive to feedback. Solid platform for anyone serious about fitness and well-being.",
-    image: "https://i.ibb.co/yQ3Xcn3/client.jpg",
-  },
-];
+    "name": "Chris Rodriguez",
+    "rating": 4,
+    "testimonial":"The nutritionist's advice has been invaluable in helping me make healthier food choices. The blog section is informative, and the team is responsive to feedback. Solid platform for anyone serious about fitness and well-being.",
+    "image": "https://i.ibb.co/yQ3Xcn3/client.jpg",
+  }
+]
 
 const Testimonial = () => {
   return (

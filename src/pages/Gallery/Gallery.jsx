@@ -1,6 +1,7 @@
 import React from 'react'
 import useTitle from '../../hooks/useTitle'
 import GalleryItem from './GalleryItem'
+import useLoadData from '../../hooks/useLoadData'
 
 const galleryData = [
   {
@@ -655,6 +656,15 @@ const galleryData = [
 
 const Gallery = () => {
     useTitle('FitnessHub | Gallery')
+    const {loading, error, data} = useLoadData("gallery");
+
+    if(error){
+      return <h1 className='text-red-600 font-bold'>{error}</h1>
+    }
+
+    if(loading){
+      return <h1>Loading........</h1>
+    }
   return (
     <div>
         <div className='relative'>
