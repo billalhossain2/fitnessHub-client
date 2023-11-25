@@ -386,12 +386,12 @@ const Forums = () => {
   return (
     <div>
       <div className='relative'>
-            <img className='w-full h-[500px]' src="https://i.ibb.co/b2xqh63/forum.png" alt="Forum cover" />
-            <p className='absolute bg-black bg-opacity-70 top-0 w-full h-full text-white font-bold text-7xl flex items-center justify-center'>Our Forums</p>
+            <img className='w-full h-[500px] rounded-3xl' src="https://i.ibb.co/b2xqh63/forum.png" alt="Forum cover" />
+            <p className='absolute bg-black bg-opacity-70 top-0 w-full h-full text-white font-bold md:text-7xl text-4xl flex items-center justify-center rounded-3xl'>Our Forums</p>
 
       </div>
 
-    <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 mt-10">
+    <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-5 mt-10">
         {
             forumsData.map((forum, index) => <ForumItem key={index} forum={forum}></ForumItem>)
         }
