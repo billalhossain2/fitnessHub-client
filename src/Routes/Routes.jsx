@@ -15,6 +15,7 @@ import TrainerDetails from "../pages/Trainer/TrainerDetails";
 import Forums from "../pages/Forums/Forums";
 import InfiniteScrollUi from "../pages/InfiniteScroll/InfiniteScroll";
 import ClassDetails from "../pages/Classes/ClassDetails/ClassDetails";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -36,10 +37,10 @@ const router = createBrowserRouter([
       },
       {
         path:"/trainer-form",
-        element:<TrainerForm></TrainerForm>
+        element:<PrivateRoute><TrainerForm></TrainerForm></PrivateRoute>
       },
       {
-        path:"/trainer-details",
+        path:"/trainer-details/:trainerId",
         element:<TrainerDetails></TrainerDetails>
       },
       {

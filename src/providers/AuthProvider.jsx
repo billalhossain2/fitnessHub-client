@@ -37,22 +37,7 @@ const AuthProvider = ({children}) => {
     useEffect(()=>{
       const unSubscribe = onAuthStateChanged(auth, currentUser=>{
         setUser(currentUser);
-      
-
-        //set cookie
-        if(currentUser){
-          setLoading(false);
-          const userInfo = {email:currentUser.email}
-          axios.post('http://localhost:9000/login', userInfo)
-          .then(res=>{
-
-          })
-          .catch(error => console.log('cookie set error===> ', error))
-        }else{
-          axios.get('http://localhost:9000/logout', {withCredentials:true})
-          .then(()=>console.log('cookie removed'))
-          .catch(error => console.log('cookie remove error===> ', error))
-        }
+        setLoading(false)
       })
 
       return ()=>unSubscribe()

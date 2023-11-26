@@ -7,9 +7,15 @@ import { LiaKeySolid } from "react-icons/lia";
 import { HiOutlinePhotograph } from "react-icons/hi";
 import useAuth from "../../hooks/useAuth";
 import useTitle from "../../hooks/useTitle";
+import useAxiosInstance from "../../hooks/useAxiosInstance";
 
 function Signup() {
   useTitle('FitnessHub | Signup')
+    // User Context
+  const { user, signUpWithEmailPwd, updateUserProfile, signOutUser } = useAuth();
+  const axiosInstance = useAxiosInstance();
+
+  const navigate = useNavigate();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -21,10 +27,6 @@ function Signup() {
 
   const [processing, setProcessing] = useState(false);
 
-  // User Context
-  const { user, signUpWithEmailPwd, updateUserProfile, signOutUser } =
-    useAuth();
-  const navigate = useNavigate();
 
   const handleNameChange = (e) => {
     setName(e.target.value);
@@ -101,15 +103,21 @@ function Signup() {
     if (isValid) {
       // You can now submit the registration data
       console.log("Registration data:", { name, email, password, photoUrl });
+      const newUser = { name, email, photoUrl, role:'member' }
       try {
         setProcessing(true);
         const signupResponse = await signUpWithEmailPwd(email, password);
         const updateProfileResponse = await updateUserProfile(name, photoUrl);
         const signOutResponse = await signOutUser();
+
+        //Save registration details to database
+        const res = axiosInstance.post("/users", newUser)
+        
         setProcessing(false)
         toast.success("Signup success!", { autoClose: 2000 });
         navigate("/login")
       } catch (error) {
+        setProcessing(false)
         toast.success(error.message, { autoClose: 2000 });
       }
     }

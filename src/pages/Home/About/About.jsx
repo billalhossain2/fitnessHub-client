@@ -35,8 +35,8 @@ const About = () => {
           modules={[Autoplay, Pagination, Navigation]}
           className="mySwiper"
         >
-          {images.map((img) => (
-            <SwiperSlide>
+          {images.map((img, index) => (
+            <SwiperSlide key={index}>
               <div>
                 <img
                   className="w-full md:h-[400px] h-[300px]"

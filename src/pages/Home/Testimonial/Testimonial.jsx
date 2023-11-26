@@ -11,35 +11,22 @@ import "swiper/css/navigation";
 
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
-
-const testimonialData = [
-  {
-    "name": "Jessica Thompson",
-    "rating": 5,
-    "testimonial":"I've been a part of this fitness community for a year now, and it has been an amazing journey. The trainers are knowledgeable, the workouts are challenging yet fun, and the support from other members is incredible. Highly recommend!",
-    "image": "https://i.ibb.co/yQ3Xcn3/client.jpg",
-  },
-  {
-    "name": "Ryan Williams",
-    "rating": 4,
-    "testimonial":"Great variety of workout classes and programs. The nutrition tips have been a game-changer for me. The app is user-friendly, and the trainers are always available for questions. Overall, a fantastic fitness resource.",
-    "image": "https://i.ibb.co/yQ3Xcn3/client.jpg",
-  },
-  {
-    "name": "Megan Carter",
-    "rating": 5,
-    "testimonial":"I love the holistic approach to wellness on this platform. The yoga sessions have helped me with flexibility and stress relief. The team is supportive, and the community challenges keep me motivated. So glad I found this!",
-    "image": "https://i.ibb.co/yQ3Xcn3/client.jpg",
-  },
-  {
-    "name": "Chris Rodriguez",
-    "rating": 4,
-    "testimonial":"The nutritionist's advice has been invaluable in helping me make healthier food choices. The blog section is informative, and the team is responsive to feedback. Solid platform for anyone serious about fitness and well-being.",
-    "image": "https://i.ibb.co/yQ3Xcn3/client.jpg",
-  }
-]
+import useLoadData from "../../../hooks/useLoadData";
+import Error from "../../../components/Error";
+import Spinner from "../../../components/Spinner";
 
 const Testimonial = () => {
+
+  const {loading, error, data:reviews} = useLoadData("reviews");
+
+  if(error){
+    return <Error error={error}></Error>
+  }
+
+  if(loading){
+    return <Spinner></Spinner>
+  }
+
   return (
     <div>
       <SectionTitle title="What Our Client Says"></SectionTitle>
@@ -59,8 +46,8 @@ const Testimonial = () => {
           modules={[Autoplay, Pagination, Navigation]}
           className="mySwiper"
         >
-          {testimonialData.map((item) => (
-            <SwiperSlide>
+          {reviews.map((item) => (
+            <SwiperSlide key={item._id}>
               <div className="flex flex-col justify-center items-center gap-3 mb-10">
                 <img
                   className="w-60 h-60 rounded-full"

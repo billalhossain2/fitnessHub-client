@@ -7,13 +7,16 @@ import { toast } from 'react-toastify';
 import {AiOutlineMail} from "react-icons/ai"
 import {LiaKeySolid} from "react-icons/lia"
 import useTitle from '../../hooks/useTitle';
+import useAxiosInstance from '../../hooks/useAxiosInstance';
 
 //Pwd:billalHossain*76
 
 function Login() {
   useTitle('FitnessHub | Login')
+  const axiosInstance = useAxiosInstance()
   const navigate = useNavigate()
   const from = useLocation()?.state?.from || "/";
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [emailError, setEmailError] = useState('');
@@ -35,16 +38,23 @@ function Login() {
     setShowPassword(!showPassword);
   };
 
-  const handleGoogleSignIn = () => {
-    // Google Sign-In logic here
-    signInWithGoogle()
-    .then(result => {
-      toast.success("Login success!", {autoClose:1000})
-      navigate(from)
-    })
-    .catch(error=>{
+  const handleGoogleSignIn = async() => {
+    try {
+
+      // Google Sign-In 
+    const res = await signInWithGoogle();
+    const newUser = {name:res.user?.displayName, email: res.user?.email, role:'member'};
+
+    //Save registration details to database
+    const saveUserResponse = await axiosInstance.post("/users", newUser)
+
+    toast.success("Login success!", {autoClose:1000})
+    navigate(from)
+    
+    } catch (error) {
       toast.error(error.message, {autoClose:1000})
-    })
+    }
+
   };
 
   const handleSubmit = (e) => {

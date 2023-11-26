@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const BlogItem = ({blog}) => {
  const {title, date, author, image, content} = blog;
@@ -9,6 +10,9 @@ const BlogItem = ({blog}) => {
         <p className='font-medium'>{date}</p>
         <p className='font-medium'>{author}</p>
         <p className='text-gray-500'>{content}</p>
+        <Link to="/forums">
+        <button className='border-[1px] border-[#FF4D31] px-4 py-2 rounded-md text-[#FF4D31] font-medium hover:bg-[#FF4D31] hover:text-white duration-300 mt-3'>Explore More</button>
+        </Link>
     </div>
   )
 }

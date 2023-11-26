@@ -5,14 +5,14 @@ import { useState } from "react"
 const useLoadData = (endpoint) => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(false);
+  const [error, setError] = useState("");
 
   useEffect(()=>{
     axios.get(`http://localhost:9000/${endpoint}`)
     .then(res => {
       setData(res.data)
       setLoading(false)
-      setError(false)
+      setError("")
     })
     .catch(error => {
       setError(error.message)

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
@@ -19,9 +20,11 @@ const Banner = () => {
           potential, achieve fitness goals, and embrace a healthier lifestyle.
           Start your journey to a stronger, confident you!
         </p>
-        <button className="bg-[#FF4D31] px-4 py-2 font-bold text-white rounded-md">
-          Our Classes
+        <Link to="/classes">
+        <button className="bg-[#FF4D31] px-4 py-2 font-bold text-white rounded-md mt-10">
+          Explore Classes
         </button>
+        </Link>
       </div>
       </div>
     </div>
