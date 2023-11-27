@@ -21,7 +21,6 @@ const Dashboard = () => {
   // TODO: load dynamic status of user from database
   // const [isAdmin, isAdminLoading] = useAdmin();
   const { isLoading, error, data: role } = useRole();
-  console.log("Role of the logged in user==============> ", role);
 
   if (isLoading) {
     return <h1>Loading................</h1>;

@@ -26,7 +26,7 @@ const AllSubscribers = () => {
         <tbody>
           {/* rows */}
           {subscribers?.map((user, index) => (
-            <tr className="border-b-2 border-gray-200">
+            <tr key={user._id} className="border-b-2 border-gray-200">
               <td>{index+1}</td>
               <td>{user.name}</td>
               <td>{user.email}</td>

@@ -1,18 +1,34 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { MdOutlineRemoveRedEye } from "react-icons/md";
+import useAxiosSecure from '../../../../hooks/useAxiosSecure';
+import useAppliedTrainers from '../../../../hooks/useAppliedTrainers';
+import { toast } from 'react-toastify';
+import Modal from './Modal';
 const TableRow = ({trainer, index}) => {
-    const {name, image, specialization, phone, email} = trainer || {};
+  const axiosSecure = useAxiosSecure();
+  const {refetch} = useAppliedTrainers();
+    const {_id, name, image, specialization, phone, email} = trainer || {};
+
+    //modal controlling state
+    const [isOpen, setIsOpen] = useState(false);
+
     const handleShowDetails = ()=>{
-        alert("Show Details")
+      setIsOpen(true)
     }
-    const handleConfirm = ()=>{
-        alert("Confirm")
+
+    const handleConfirm = async()=>{
+        const res = await axiosSecure.patch(`/trainers/${_id}`)
+        refetch()
+        toast.success("Application was accepted successfully", {autoClose:2000})
     }
 
     const handleReject = ()=>{
-        alert("Reject")
+     
     }
+
   return (
+    <>
+    <Modal isOpen={isOpen} setIsOpen={setIsOpen} trainer={trainer}></Modal>
     <tr>
     <td>{index+1}</td>
     <td>
@@ -35,6 +51,7 @@ const TableRow = ({trainer, index}) => {
       <button onClick={handleReject} className="border-[1px] border-[#C8D96F] text-gray-800 px-4 py-2 hover:bg-[#525D1D] hover:text-white rounded-md duration-300">Reject</button>
     </td>
   </tr>
+  </>
   )
 }
 

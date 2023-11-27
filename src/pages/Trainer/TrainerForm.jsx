@@ -68,11 +68,11 @@ const TrainerForm = () => {
       if(imgResponse.success && imgResponse.status===200){
         const imgFile = imgResponse.data;
         const photoUrl = imgFile.display_url;
-        const newTrainer = {...formData, email:user?.email, image:photoUrl, totalSlots:formData.available_slots.length}
+        const newTrainer = {...formData, application:"pending", email:user?.email, image:photoUrl, totalSlots:formData.available_slots.length}
         console.log("new trainer data========> ", newTrainer)
 
-        return;
-        axiosSecure.post('/applied-tainers', newTrainer)
+        axiosSecure.post('/trainers', newTrainer)
+        
         .then(res =>{
           toast.success('Application was successful', {autoClose:2000})
         })
