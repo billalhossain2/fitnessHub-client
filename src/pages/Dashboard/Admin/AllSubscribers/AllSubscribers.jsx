@@ -1,19 +1,10 @@
 import React from 'react'
 import useTitle from '../../../../hooks/useTitle'
-
-const subscribers = [
-  {
-    name:'Billal Hossain',
-    email:'billal.webdev@gmail.com'
-  },
-  {
-    name:'Siam Ahmed',
-    email:'siam.ahmed@gmail.com'
-  },
-]
+import useLoadData from '../../../../hooks/useLoadData'
 
 const AllSubscribers = () => {
   useTitle("FitnessHub | All Subscribers")
+  const {loading, error, data:subscribers=[]} = useLoadData("subscriptions");
   return (
     <div className="bg-gray-100 w-full h-full">
     <h3 className='lg:text-5xl md:text-4xl text-3xl font-bold text-center my-10'>All Subscribers</h3>
