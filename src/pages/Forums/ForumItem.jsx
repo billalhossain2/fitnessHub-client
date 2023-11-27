@@ -22,6 +22,7 @@ const ForumItem = ({forum}) => {
     <span className='text-[#FF4D31] font-bold cursor-pointer hover:underline'>Read More..</span>
     <div className='flex gap-5'>
     <button onClick={handleLike} className='flex items-center gap-1 hover:text-[#FF4D31]'><AiOutlineLike className='text-2xl'/><span>Like</span></button>
+    {/* TODO: Refetch to show change instantly */}
     <p>Liked: {likes || 0}</p>
     </div>
     </div>

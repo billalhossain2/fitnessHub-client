@@ -45,6 +45,11 @@ const Dashboard = () => {
         </NavLink>
       </li>
       <li>
+        <NavLink to="/dashboard/add-new-forum">
+          <FaCashRegister className="text-2xl"></FaCashRegister>Add New Forum
+        </NavLink>
+      </li>
+      <li>
         <NavLink to="/dashboard/balance">
           <FaSackDollar className="text-2xl"></FaSackDollar>Balance
         </NavLink>
