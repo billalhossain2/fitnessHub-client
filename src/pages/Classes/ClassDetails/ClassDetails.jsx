@@ -5,47 +5,50 @@ import {
 } from "react-icons/md";
 import useTitle from "../../../hooks/useTitle";
 import { SlCalender } from "react-icons/sl";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import useLoadData from "../../../hooks/useLoadData";
 
 const ClassDetails = () => {
   useTitle("FitnessHub | Class Details");
+  const {classId} = useParams();
+  console.log("Class Id===========> ", classId)
+
+  const {loading, error, data} = useLoadData(`classes/${classId}`);
+  const {classTitle, category, image, startTime, startDate, location} = data || {};
+  console.log("Class Details==========> ", data)
+
   return (
     <div>
       <div className="relative">
         <img
           className="w-full h-[500px] rounded-3xl"
-          src="https://i.ibb.co/RpjysL8/galler-cover.jpg"
+          src={image}
           alt="Gallery"
         />
         <div className="absolute bg-black rounded-3xl bg-opacity-50 top-0 w-full h-full text-white flex items-center font-bold">
           <div className="md:ml-10 ml-3 space-y-5">
-            <h3 className="md:text-6xl text-4xl">Morning Cardio Blast</h3>
+            <h3 className="md:text-6xl text-4xl">{classTitle}</h3>
             <p className="text-2xl flex md:flex-row flex-col md:items-center">
-              Cardio
+              {category}
               <MdOutlineKeyboardDoubleArrowRight className="text-[#FF4D31] mx-1" />
               Cardio Blast{" "}
               <MdOutlineKeyboardDoubleArrowRight className="text-[#FF4D31] mx-1" />
-              Morning Cardio Blast
+              {classTitle}
             </p>
           </div>
         </div>
       </div>
 
       {/* instructor image  */}
-      <div className="mb-3">
-        <img
-          className="rounded-3xl w-full mt-24 mb-2 h-[500px]"
-          src="https://i.ibb.co/JndpMjL/yoga-instructor.jpg"
-          alt="trainer"
-        />
+      <div className="my-3">
         <div className="flex gap-5 items-center">
           <p className="flex items-center gap-1">
             <MdAccessTime className="text-3xl" />
-            9:00 AM - 10:00 AM
+            {startTime}
           </p>
           <p className="flex items-center gap-1">
             <SlCalender />
-            27-11-2023
+            {startDate}
           </p>
         </div>
       </div>
@@ -92,16 +95,16 @@ const ClassDetails = () => {
           <h3 className="text-[#DEC267] font-bold text-[18px]">
             Date and Time
           </h3>
-          <p className="text-white font-medium my-2">27-11-2023</p>
-          <p className="text-white font-medium my-2">9:00 AM - 10:00 AM</p>
+          <p className="text-white font-medium my-2">{startDate}</p>
+          <p className="text-white font-medium my-2">{startTime}</p>
           <h3 className="text-[#DEC267] font-bold text-[18px] mt-10">
             Location
           </h3>
-          <p className="text-white font-medium my-2">Cityvally, New York</p>
+          <p className="text-white font-medium my-2">{location}</p>
           <h3 className="text-[#DEC267] font-bold text-[18px] mt-10">
             Event Category
           </h3>
-          <p className="text-white font-medium my-2">Cardio Blast</p>
+          <p className="text-white font-medium my-2">{category}</p>
           <Link to="/trainer">
           <button className="px-4 py-2 border-[1px] border-white hover:bg-[#FF4D31] hover:border-[#FF4D31] duration-300 rounded-lg mt-10 text-white">
             Join Now

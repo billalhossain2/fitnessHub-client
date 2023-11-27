@@ -14,6 +14,8 @@ import { MdCardMembership } from "react-icons/md";
 import { MdOutlineForum } from "react-icons/md";
 import { GiDiscussion } from "react-icons/gi";
 import useRole from "../hooks/useRole";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Dashboard = () => {
   // TODO: load dynamic status of user from database
@@ -118,11 +120,12 @@ const Dashboard = () => {
           aria-label="close sidebar"
           className="drawer-overlay"
         ></label>
-        <ul className="menu w-80 min-h-full bg-[#D1A054] p-4">
+        <ul className="menu w-80 min-h-full bg-[#C8D96F] p-4">
           {/* Sidebar content here */}
           {role==="admin" ?  adminLinks  : role==="trainer" ? trainerLinks : memberLinks }
         </ul>
       </div>
+      <ToastContainer></ToastContainer>
     </div>
   );
 };

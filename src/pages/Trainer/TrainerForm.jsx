@@ -15,10 +15,12 @@ const TrainerForm = () => {
   const axiosSecure = useAxiosSecure()
 
   const [formData, setFormData] = useState({
-    fullName: '',
+    name: '',
     email: '', // Email is read-only
+    phone:'',
     age: '',
     experience:'',
+    specialization:'',
     skills: [],
     availableTimeWeek: [],
     available_slots: [],
@@ -68,6 +70,8 @@ const TrainerForm = () => {
         const photoUrl = imgFile.display_url;
         const newTrainer = {...formData, email:user?.email, image:photoUrl, totalSlots:formData.available_slots.length}
         console.log("new trainer data========> ", newTrainer)
+
+        return;
         axiosSecure.post('/applied-tainers', newTrainer)
         .then(res =>{
           toast.success('Application was successful', {autoClose:2000})
@@ -86,14 +90,14 @@ const TrainerForm = () => {
       <form onSubmit={handleSubmit}>
       <div className='grid md:grid-cols-2 grid-cols-1 gap-5'>
         <div className="mb-4">
-          <label htmlFor="fullName" className="block text-sm font-semibold text-gray-600">
+          <label htmlFor="name" className="block text-sm font-semibold text-gray-600">
             Full Name
           </label>
           <input
             type="text"
-            id="fullName"
-            name="fullName"
-            value={formData.fullName}
+            id="name"
+            name="name"
+            value={formData.name}
             onChange={handleInputChange}
             className="w-full mt-1 p-2 border rounded-md"
             required
@@ -111,6 +115,20 @@ const TrainerForm = () => {
             value={user?.email}
             className="w-full mt-1 p-2 border rounded-md bg-gray-100"
             readOnly
+          />
+        </div>
+
+        <div className="mb-4">
+          <label htmlFor="phone" className="block text-sm font-semibold text-gray-600">
+            Phone
+          </label>
+          <input
+            type="number"
+            id="phone"
+            name="phone"
+            value={formData?.phone}
+            onChange={handleInputChange}
+            className="w-full mt-1 p-2 border rounded-md"
           />
         </div>
 
@@ -137,6 +155,21 @@ const TrainerForm = () => {
             id="age"
             name="age"
             value={formData.age}
+            onChange={handleInputChange}
+            className="w-full mt-1 p-2 border rounded-md"
+            required
+          />
+        </div>
+
+        <div className="mb-4">
+          <label htmlFor="specialization" className="block text-sm font-semibold text-gray-600">
+            Specialization (Your Expertise as a Trainer)
+          </label>
+          <input
+            type="text"
+            id="specialization"
+            name="specialization"
+            value={formData.specialization}
             onChange={handleInputChange}
             className="w-full mt-1 p-2 border rounded-md"
             required

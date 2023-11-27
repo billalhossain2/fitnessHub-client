@@ -6,14 +6,15 @@ import useAxiosInstance from '../../hooks/useAxiosInstance';
 const ForumItem = ({forum}) => {
     const {user} = useAuth();
     const axiosInstance = useAxiosInstance()
-    const {_id, title, date, author, image, content, likes} = forum;
+    const {_id, title, date, author, image, content, likes, postedBy} = forum || {};
 
     const handleLike = async()=>{
       const res = await axiosInstance.put(`/forums/${_id}`, {email:user?.email})
     }
 
   return (
-    <div className='rounded-md border-2 border-[#ff4c314f] hover:border-[#FF4D31] duration-300 p-3 space-y-2 flex flex-col'>
+    <div className='rounded-md border-2 border-[#ff4c314f] hover:border-[#FF4D31] duration-300 p-3 space-y-2 flex flex-col relative'>
+    {postedBy && <p className='absolute right-0 top-0 m-1 bg-[#FF4D31] text-white font-bold px-2 py-1 rounded-md text-[12px]'>{postedBy==="trainer"?"Trainer":postedBy==="admin"?"Admin":""}</p>}
     <div className='flex-grow'><img className='w-full h-40' src={image} alt="" /></div>
     <h3 className='font-bold text-[18px]'>{title}</h3>
     <p className='text-gray-500'>{content.split("").splice(0, 80).join("")}</p>
