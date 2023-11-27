@@ -4,13 +4,16 @@ export const authContext = createContext();
 
 import app from "../firebase/firebase.config";
 import {getAuth, onAuthStateChanged, GoogleAuthProvider, signInWithPopup, createUserWithEmailAndPassword, updateProfile, signInWithEmailAndPassword, signOut} from "firebase/auth"
-import axios from "axios";
+import useAxiosInstance from "../hooks/useAxiosInstance";
+
+
 const auth = getAuth(app)
 
 const googleProvider = new GoogleAuthProvider();
 
 
 const AuthProvider = ({children}) => {
+  const axiosInstance = useAxiosInstance()
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true)
 
@@ -38,6 +41,19 @@ const AuthProvider = ({children}) => {
       const unSubscribe = onAuthStateChanged(auth, currentUser=>{
         setUser(currentUser);
         setLoading(false)
+
+        if(currentUser){
+          //get token and store in client side browser
+          const userInfo = {email:currentUser.email}
+          axiosInstance.post('/set-cookie', userInfo)
+          .then((res)=>{
+            if(res.data.token){
+              localStorage.setItem('access-token', res.data.token)
+            }
+          })
+        }else{
+          localStorage.removeItem('access-token')
+        }
       })
 
       return ()=>unSubscribe()

@@ -1,15 +1,14 @@
 import { useEffect, useState } from "react";
 import Error from "../../components/Error";
 import Spinner from "../../components/Spinner";
-import useLoadData from "../../hooks/useLoadData";
 import useTitle from "../../hooks/useTitle";
 import ForumItem from "./ForumItem";
-import axios from "axios";
 import "./Forums.css"
+import { useQuery } from "@tanstack/react-query";
+import useAxiosInstance from "../../hooks/useAxiosInstance";
 const Forums = () => {
   useTitle("FitnessHub | Forums");
-
-  // const {loading, error, data:forums} = useLoadData("forums");
+  const axiosInstance = useAxiosInstance();
 
   // pagination
   const [forums, setForums] = useState([]);
@@ -17,6 +16,9 @@ const Forums = () => {
   const [currentPage, setCurrentPage] = useState(0);
   const [itemsPerPage, setItemsPerPage] = useState(6);
   const [count, setCount] = useState(0);
+
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState('')
 
   const numberOfPages = Math.ceil(count / itemsPerPage);
 
@@ -47,25 +49,26 @@ const Forums = () => {
       .then((data) => setCount(data.length));
   }, []);
 
+
   useEffect(() => {
+    setLoading(true)
     fetch(
       `http://localhost:9000/forums?page=${currentPage}&size=${itemsPerPage}`
     )
       .then((res) => res.json())
-      .then((data) => setForums(data));
+      .then((data) => {
+        setForums(data)
+        setLoading(false)
+        setError("")
+      });
   }, [currentPage, itemsPerPage]);
 
-  // if(error){
-  //   return <Error error={error}></Error>
-  // }
-
-  // if(loading){
-  //   return <Spinner></Spinner>
-  // }
+  if(loading){
+    return <Spinner></Spinner>
+  }
 
   return (
     <div>
-      <h3>Total Forums: {count}</h3>
       <div className="relative">
         <img
           className="w-full h-[500px] rounded-3xl"

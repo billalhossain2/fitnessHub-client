@@ -1,8 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../layouts/Main";
 import Dashboard from "../layouts/Dashboard";
-import AdminHome from "../pages/Dashboard/AdminHome/AdminHome";
-import UserHome from "../pages/Dashboard/UserHome/UserHome";
 import Home from "../pages/Home/Home";
 import Login from "../pages/Login/Login";
 import SignUp from "../pages/Signup/Signup";
@@ -16,6 +14,17 @@ import Forums from "../pages/Forums/Forums";
 import InfiniteScrollUi from "../pages/InfiniteScroll/InfiniteScroll";
 import ClassDetails from "../pages/Classes/ClassDetails/ClassDetails";
 import PrivateRoute from "./PrivateRoute";
+import AllSubscribers from "../pages/Dashboard/Admin/AllSubscribers/AllSubscribers";
+import AllTrainers from "../pages/Dashboard/Admin/AllTrainers/AllTrainers";
+import AppliedTrainers from "../pages/Dashboard/Admin/AppliedTrainers/AppliedTrainers";
+import Balance from "../pages/Dashboard/Admin/Balance/Balance";
+import ActivityLog from "../pages/Dashboard/Members/ActivityLog/ActivityLog";
+import ProfileSettings from "../pages/Dashboard/Members/ProfileSettings/ProfileSettings";
+import RecommendedClasses from "../pages/Dashboard/Members/RecommendedClasses/RecommendedClasses";
+import ManageSlots from "../pages/Dashboard/Trainers/ManageSlots/ManageSlots";
+import ManageMembers from "../pages/Dashboard/Trainers/ManageMembers/ManageMembers";
+import AddForum from "../pages/Dashboard/Trainers/AddForum/AddForum";
+import AddClass from "../pages/Dashboard/Trainers/AddClass/AddClass";
 
 const router = createBrowserRouter([
   {
@@ -72,15 +81,51 @@ const router = createBrowserRouter([
 
   {
     path:"/dashboard",
-    element:<Dashboard></Dashboard>,
+    element:<PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
     children:[
       {
-        path:"/dashboard/admin-home",
-        element:<AdminHome></AdminHome>
+        path:"/dashboard/all-subscribers",
+        element:<AllSubscribers></AllSubscribers>
       },
       {
-        path:"/dashboard/user-home",
-        element:<UserHome></UserHome>
+        path:"/dashboard/all-trainers",
+        element:<AllTrainers></AllTrainers>
+      },
+      {
+        path:"/dashboard/applied-trainers",
+        element:<AppliedTrainers></AppliedTrainers>
+      },
+      {
+        path:"/dashboard/balance",
+        element:<Balance></Balance>
+      },
+      {
+        path:"/dashboard/activity-log",
+        element:<ActivityLog></ActivityLog>
+      },
+      {
+        path:"/dashboard/profile-settings",
+        element:<ProfileSettings></ProfileSettings>
+      },
+      {
+        path:"/dashboard/recommended-classes",
+        element:<RecommendedClasses></RecommendedClasses>
+      },
+      {
+        path:"/dashboard/manage-slots",
+        element:<ManageSlots></ManageSlots>
+      },
+      {
+        path:"/dashboard/manage-members",
+        element:<ManageMembers></ManageMembers>
+      },
+      {
+        path:"/dashboard/add-new-forum",
+        element:<AddForum></AddForum>
+      },
+      {
+        path:"/dashboard/add-new-class",
+        element:<AddClass></AddClass>
       },
     ]
   }

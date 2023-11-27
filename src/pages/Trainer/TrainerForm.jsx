@@ -1,15 +1,19 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import useTitle from '../../hooks/useTitle';
-const availableTimesPerDay = [
+import useAuth from '../../hooks/useAuth';
+import useAxiosSecure from '../../hooks/useAxiosSecure';
+import { toast } from 'react-toastify';
 
-]
 
 const IMAGE_HOSTING_API_KEY=import.meta.env.VITE_IMAGE_HOSTING_TOKEN;
 
 
 const TrainerForm = () => {
   useTitle("FitnessHub | Become A Trainer")
+  const {user} = useAuth() || {};
+  const axiosSecure = useAxiosSecure()
+
   const [formData, setFormData] = useState({
     fullName: '',
     email: '', // Email is read-only
@@ -62,13 +66,15 @@ const TrainerForm = () => {
       if(imgResponse.success && imgResponse.status===200){
         const imgFile = imgResponse.data;
         const photoUrl = imgFile.display_url;
-        const newTrainer = {...formData, image:photoUrl, totalSlots:formData.available_slots.length}
+        const newTrainer = {...formData, email:user?.email, image:photoUrl, totalSlots:formData.available_slots.length}
         console.log("new trainer data========> ", newTrainer)
-        
+        axiosSecure.post('/applied-tainers', newTrainer)
+        .then(res =>{
+          toast.success('Application was successful', {autoClose:2000})
+        })
       }
     })
     .catch(error => console.log("File uploading error========> ", error))
-
 
     console.log('Form submitted:', formData);
   };
@@ -102,7 +108,7 @@ const TrainerForm = () => {
             type="email"
             id="email"
             name="email"
-            value={formData.email}
+            value={user?.email}
             className="w-full mt-1 p-2 border rounded-md bg-gray-100"
             readOnly
           />
