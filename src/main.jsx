@@ -11,6 +11,7 @@ import {
   QueryClientProvider,
   useQuery,
 } from '@tanstack/react-query'
+import SlotProvider from "./providers/SlotProvider.jsx";
 
 const queryClient = new QueryClient()
 
@@ -19,7 +20,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <AuthProvider>
       <QueryClientProvider client={queryClient}>
+      <SlotProvider>
       <RouterProvider router={router}></RouterProvider>
+      </SlotProvider>
       </QueryClientProvider>
     </AuthProvider>
   </React.StrictMode>

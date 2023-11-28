@@ -25,6 +25,7 @@ import ManageSlots from "../pages/Dashboard/Trainers/ManageSlots/ManageSlots";
 import ManageMembers from "../pages/Dashboard/Trainers/ManageMembers/ManageMembers";
 import AddForum from "../pages/Dashboard/Trainers/AddForum/AddForum";
 import AddClass from "../pages/Dashboard/Trainers/AddClass/AddClass";
+import TrainerBooking from "../pages/Trainer/TrainerBooking/TrainerBooking";
 
 const router = createBrowserRouter([
   {
@@ -75,6 +76,10 @@ const router = createBrowserRouter([
       {
         path:"/infinite-scroll",
         element:<InfiniteScrollUi></InfiniteScrollUi>
+      },
+      {
+        path:"/trainer-booking/:trainerId",
+        element:<TrainerBooking></TrainerBooking>
       },
     ]
   },

@@ -10,7 +10,6 @@ const TrainerDetails = () => {
   useTitle("FitnessHub | Trainer Details")
   const {trainerId} = useParams();
   const {loading, error, data:trainer} = useLoadData(`trainers/${trainerId}`);
-  console.log("Trainer", trainer)
 
   const {available_slots=[], image, name, specialization} = trainer || {};
 
@@ -40,7 +39,7 @@ const TrainerDetails = () => {
         <p className='text-center mb-5 font-medium text-[#FF4D31]'>---Please Book A Service---</p>
         <div className='grid md:grid-cols-3 grid-cols-1 gap-5'>
           {
-            available_slots?.map((slot, index) => <BookItem key={index} slot={slot}></BookItem>)
+            available_slots?.map((slot, index) => <BookItem key={index} slot={slot} trainer={trainer}></BookItem>)
           }
         </div>
        </div>
