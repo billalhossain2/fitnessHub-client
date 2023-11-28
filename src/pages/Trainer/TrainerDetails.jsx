@@ -11,7 +11,7 @@ const TrainerDetails = () => {
   const {trainerId} = useParams();
   const {loading, error, data:trainer} = useLoadData(`trainers/${trainerId}`);
 
-  const {available_slots=[], image, name, specialization} = trainer || {};
+  const {available_slots=[], image, name, specialization, experience, totalSlots, email, phone, skills} = trainer || {};
 
   if(error){
     return <Error></Error>
@@ -25,11 +25,28 @@ const TrainerDetails = () => {
     <div>
        <div className='relative'>
             <img className='w-full h-[500px] rounded-3xl' src={image} alt="Gallery" />
-            <div className='absolute bg-black rounded-3xl bg-opacity-50 top-0 w-full h-full text-white flex items-center font-bold'>
-              <div className='md:ml-10 ml-3 space-y-5'>
-              <p className='text-2xl'>Instructor</p>
-              <h3 className='md:text-6xl text-4xl'>{name}</h3>
-              <p className='text-2xl flex md:flex-row flex-col md:items-center'>Fitness<MdOutlineKeyboardDoubleArrowRight className="text-[#FF4D31] mx-1"/>Instructor <MdOutlineKeyboardDoubleArrowRight className="text-[#FF4D31] mx-1"/>{name}</p>
+            <div className='absolute bg-black rounded-3xl bg-opacity-70 top-0 w-full h-full text-white flex items-center'>
+              <div className='md:ml-10 ml-3 space-y-5 font-bold'>
+              <p className='text-2xl font-bold'>Instructor</p>
+              <h3 className='md:text-6xl text-4xl font-bold'>{name}</h3>
+              <p className='text-2xl flex md:flex-row flex-col md:items-center font-bold'>Fitness<MdOutlineKeyboardDoubleArrowRight className="text-[#FF4D31] mx-1"/>Instructor <MdOutlineKeyboardDoubleArrowRight className="text-[#FF4D31] mx-1"/>{name}</p>
+              {/* Details  */}
+              <div className='space-y-1 text-gray-200 bg-black bg-opacity-60 p-2 rounded-lg'>
+              <p><span>Experience: </span>{experience}</p>
+              <p><span>Expertise: </span>{specialization}</p>
+              <p><span>Total Slots: </span>{totalSlots}</p>
+              <div>
+              <span>Special Skills: </span>
+              <span>
+                {
+                  skills.map((skill, index) => <span key={index}>{skill}, </span>)
+                }
+              </span>
+              </div>
+              <p>Contact Info:</p>
+              <p><span>Email: </span>{email}</p>
+              <p><span>Phone: </span>{phone}</p>
+              </div>
               </div>
             </div>
        </div>

@@ -1,9 +1,9 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const TableRow = ({trainer, index}) => {
-    const {name, image, specialization, phone, email} = trainer || {};
+    const {_id, name, image, specialization, phone, email, status} = trainer || {};
     const handlePay = ()=>{
-      alert("Pay now")
     }
   return (
     <tr>
@@ -22,8 +22,11 @@ const TableRow = ({trainer, index}) => {
       </div>
     </td>
     <td>{email}</td>
+    <td>{status === "paid" ? <span className='font-bold bg-green-500 text-white px-4 py-1 rounded-md font-bold'>Paid</span> : <span className='bg-orange-500 font-bold text-white px-2 py-1 rounded-md'>Pending</span>}</td>
     <th>
-      <button onClick={handlePay} className="border-[1px] border-[#C8D96F] text-gray-800 px-4 py-2 hover:bg-[#525D1D] hover:text-white rounded-md duration-300">Pay</button>
+       <Link to={`/dashboard/trainer-payment/${_id}`}>
+       <button disabled={status==="paid" ? true : false} onClick={handlePay} className="border-[1px] border-[#C8D96F] text-gray-800 px-4 py-2 hover:bg-[#525D1D] hover:text-white rounded-md duration-300">Pay</button>
+       </Link>
     </th>
   </tr>
   )

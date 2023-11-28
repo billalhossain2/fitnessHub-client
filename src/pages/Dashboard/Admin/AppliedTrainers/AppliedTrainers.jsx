@@ -7,8 +7,7 @@ import useAppliedTrainers from '../../../../hooks/useAppliedTrainers'
 const AppliedTrainers = () => {
   useTitle("FitnessHub | Applied Trainers")
   // const {loading, error, data:allTrainers} = useLoadData("applied-trainers?application=pending")
-  const {isLoading, isError, data:allTrainers=[], refetch} = useAppliedTrainers();
-
+  const {isLoading, isError, data:appliedTrainers=[], refetch} = useAppliedTrainers();
   return (
     <div className="bg-gray-100 w-full h-full">
     <h3 className='lg:text-5xl md:text-4xl text-3xl font-bold text-center my-10'>Applied Trainers</h3>
@@ -33,7 +32,7 @@ const AppliedTrainers = () => {
     <tbody>
       {/* row 1 */}
      {
-      allTrainers?.map((trainer, index) => <TableRow key={trainer._id} index={index} trainer={trainer}></TableRow>)
+      appliedTrainers?.map((trainer, index) => <TableRow key={trainer._id} index={index} trainer={trainer}></TableRow>)
      }
     </tbody>
   </table>

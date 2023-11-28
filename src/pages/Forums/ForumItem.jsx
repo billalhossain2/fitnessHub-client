@@ -2,6 +2,7 @@ import React from 'react'
 import useAuth from '../../hooks/useAuth';
 import { AiOutlineLike } from "react-icons/ai";
 import useAxiosInstance from '../../hooks/useAxiosInstance';
+import { toast } from 'react-toastify';
 
 const ForumItem = ({forum, setRefetch}) => {
     const {user} = useAuth();
@@ -9,8 +10,12 @@ const ForumItem = ({forum, setRefetch}) => {
     const {_id, title, date, author, image, content, likes, postedBy} = forum || {};
 
     const handleLike = async()=>{
-      const res = await axiosInstance.put(`/forums/${_id}`, {email:user?.email})
-      setRefetch({})
+      if(user){
+        const res = await axiosInstance.put(`/forums/${_id}`, {email:user?.email})
+        setRefetch({})
+      }else{
+        toast.warning("Please login first!", {autoClose:1000})
+      }
     }
 
   return (

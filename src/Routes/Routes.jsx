@@ -26,6 +26,8 @@ import ManageMembers from "../pages/Dashboard/Trainers/ManageMembers/ManageMembe
 import AddForum from "../pages/Dashboard/Trainers/AddForum/AddForum";
 import AddClass from "../pages/Dashboard/Trainers/AddClass/AddClass";
 import TrainerBooking from "../pages/Trainer/TrainerBooking/TrainerBooking";
+import Payment from "../pages/Payment/Payment";
+import TrainerPayment from "../pages/Dashboard/Admin/Payment/TrainerPayment";
 
 const router = createBrowserRouter([
   {
@@ -79,8 +81,12 @@ const router = createBrowserRouter([
       },
       {
         path:"/trainer-booking/:trainerId",
-        element:<TrainerBooking></TrainerBooking>
+        element:<PrivateRoute><TrainerBooking></TrainerBooking></PrivateRoute>
       },
+      {
+        path:"/payment",
+        element:<PrivateRoute><Payment></Payment></PrivateRoute>
+      }
     ]
   },
 
@@ -131,6 +137,10 @@ const router = createBrowserRouter([
       {
         path:"/dashboard/add-new-class",
         element:<AddClass></AddClass>
+      },
+      {
+        path:"/dashboard/trainer-payment/:trainerId",
+        element:<PrivateRoute><TrainerPayment></TrainerPayment></PrivateRoute>
       },
     ]
   }

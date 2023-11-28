@@ -21,6 +21,8 @@ const TrainerForm = () => {
     age: '',
     experience:'',
     specialization:'',
+    joined_date:'',
+    salary:'',
     skills: [],
     availableTimeWeek: [],
     available_slots: [],
@@ -86,7 +88,7 @@ const TrainerForm = () => {
   return (
     <div className="md:w-[700px] w-full mx-auto mt-8 p-6 bg-white rounded-md shadow-md border-2 border-[#ff4c314d]">
       {console.log("times========> ", formData)}
-      <h2 className="text-2xl font-bold mb-4">Trainer Application Form</h2>
+      <h2 className="text-2xl font-bold mb-4">Apply For A Trainer</h2>
       <form onSubmit={handleSubmit}>
       <div className='grid md:grid-cols-2 grid-cols-1 gap-5'>
         <div className="mb-4">
@@ -142,6 +144,36 @@ const TrainerForm = () => {
             name="experience"
             value={formData.experience}
             onChange={handleInputChange}
+            className="w-full mt-1 p-2 border rounded-md"
+          />
+        </div>
+
+        {/* new fields  */}
+        <div className="mb-4">
+          <label htmlFor="date" className="block text-sm font-semibold">
+           Date (Expected Joining Date)
+          </label>
+          <input
+            type="date"
+            id="joined_date"
+            name="joined_date"
+            value={formData.joined_date}
+            onChange={handleInputChange}
+            className="w-full mt-1 p-2 border rounded-md"
+          />
+        </div>
+
+        <div className="mb-4">
+          <label htmlFor="salary" className="block text-sm font-semibold">
+           Expected Salary ($)
+          </label>
+          <input
+            type="number"
+            id="salary"
+            name="salary"
+            value={formData.salary}
+            onChange={handleInputChange}
+            placeholder='$ Monthly Expected Salary '
             className="w-full mt-1 p-2 border rounded-md"
           />
         </div>
@@ -230,7 +262,7 @@ const TrainerForm = () => {
 
         <div className="mb-4">
           <label htmlFor="availableTimeWeek" className="block text-sm font-semibold text-gray-600">
-            Available Time in a Week
+           Choose Available Times in a Week
           </label>
           <div className='flex flex-col gap-1'>
           <label className="mr-4">
@@ -258,7 +290,7 @@ const TrainerForm = () => {
 
         <div className="mb-4">
           <label htmlFor="availableTimeDay" className="block text-sm font-semibold text-gray-600">
-            Available Time in a Day
+           Choose Available Time Slots in a Day
           </label>
           <div className='flex flex-col gap-1'>
           <label className="mr-4">
