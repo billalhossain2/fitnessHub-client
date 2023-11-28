@@ -12,6 +12,7 @@ const Forums = () => {
 
   // pagination
   const [forums, setForums] = useState([]);
+  const [refetch, setRefetch] = useState({});
 
   const [currentPage, setCurrentPage] = useState(0);
   const [itemsPerPage, setItemsPerPage] = useState(6);
@@ -61,7 +62,7 @@ const Forums = () => {
         setLoading(false)
         setError("")
       });
-  }, [currentPage, itemsPerPage]);
+  }, [currentPage, itemsPerPage, refetch]);
 
   if(loading){
     return <Spinner></Spinner>
@@ -82,7 +83,7 @@ const Forums = () => {
 
       <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 mt-10">
         {forums.map((forum) => (
-          <ForumItem key={forum._id} forum={forum}></ForumItem>
+          <ForumItem key={forum._id} forum={forum} setRefetch={setRefetch}></ForumItem>
         ))}
       </div>
 

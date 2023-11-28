@@ -3,13 +3,14 @@ import useAuth from '../../hooks/useAuth';
 import { AiOutlineLike } from "react-icons/ai";
 import useAxiosInstance from '../../hooks/useAxiosInstance';
 
-const ForumItem = ({forum}) => {
+const ForumItem = ({forum, setRefetch}) => {
     const {user} = useAuth();
     const axiosInstance = useAxiosInstance()
     const {_id, title, date, author, image, content, likes, postedBy} = forum || {};
 
     const handleLike = async()=>{
       const res = await axiosInstance.put(`/forums/${_id}`, {email:user?.email})
+      setRefetch({})
     }
 
   return (
