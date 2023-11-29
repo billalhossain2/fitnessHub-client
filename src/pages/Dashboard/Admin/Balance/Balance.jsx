@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import useTitle from "../../../../hooks/useTitle";
 import { useQuery } from "@tanstack/react-query";
 import useAxiosSecure from "../../../../hooks/useAxiosSecure";
@@ -19,13 +19,14 @@ const Balance = () => {
 
 
   //Get All Subscribers
-  const {isLoading:subscriberLoading, data:subscribers} = useQuery({
+  const {isLoading:subscriberLoading, data:subscribers, refetch} = useQuery({
     queryKey:["TOTAL_NEWS_LETTER"],
     queryFn:async()=>{
       const res = await axiosSecure.get("/subscriptions");
       return res.data;
     }
   })
+
 
 
   //Get All Paid Members
@@ -63,13 +64,13 @@ const Balance = () => {
         balanceLoading ? <Spinner></Spinner> : <div className="grid md:grid-cols-2 grid-cols-1 gap-5 mt-5">
         <div className="bg-[#707e2a] p-3 rounded-md text-center text-white space-y-2">
           <div className="flex justify-center"><FaBalanceScale className="text-5xl"/></div>
-          <h3 className="font-bold text-2xl">Remaining Balance</h3>
+          <h3 className="font-bold text-xl">Remaining Balance</h3>
           <p className="text-3xl font-bold">${totalRemainingBalance}</p>
         </div>
 
         <div className="bg-[#707e2a] p-3 rounded-md text-center text-white space-y-2">
         <div className="flex justify-center"><MdPayment className="text-5xl"/></div>
-          <h3 className="font-bold text-2xl">Total Payment</h3>
+          <h3 className="font-bold text-xl">Total Payment</h3>
           <p className="text-3xl font-bold">${totalTrainerPayments}</p>
         </div>
       </div>

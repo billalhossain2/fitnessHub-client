@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import useTitle from '../../../../hooks/useTitle'
 import TableRow from './TableRow'
 import useLoadData from '../../../../hooks/useLoadData'
@@ -9,7 +9,9 @@ const AppliedTrainers = () => {
   useTitle("FitnessHub | Applied Trainers")
   // const {loading, error, data:allTrainers} = useLoadData("applied-trainers?application=pending")
   const {isLoading, isError, data:appliedTrainers=[], refetch} = useAppliedTrainers();
-
+  useEffect(()=>{
+    refetch()
+  }, [])
   return (
     <div className="bg-gray-100 w-full h-full">
     <h3 className='lg:text-5xl md:text-4xl text-3xl font-bold text-center my-10'>Applied Trainers</h3>

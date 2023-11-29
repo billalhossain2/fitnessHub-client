@@ -3,9 +3,6 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import { toast } from 'react-toastify';
 
-//icons
-import {AiOutlineMail} from "react-icons/ai"
-import {LiaKeySolid} from "react-icons/lia"
 import useTitle from '../../hooks/useTitle';
 import useAxiosInstance from '../../hooks/useAxiosInstance';
 

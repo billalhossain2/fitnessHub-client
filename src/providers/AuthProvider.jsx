@@ -41,7 +41,6 @@ const AuthProvider = ({children}) => {
       const unSubscribe = onAuthStateChanged(auth, currentUser=>{
         setUser(currentUser);
         setLoading(false)
-
         if(currentUser){
           //get token and store in client side browser
           const userInfo = {email:currentUser.email}

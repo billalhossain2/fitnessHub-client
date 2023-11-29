@@ -1,10 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-//icons
-import { AiOutlineMail, AiOutlineUserAdd } from "react-icons/ai";
-import { LiaKeySolid } from "react-icons/lia";
-import { HiOutlinePhotograph } from "react-icons/hi";
 import useAuth from "../../hooks/useAuth";
 import useTitle from "../../hooks/useTitle";
 import useAxiosInstance from "../../hooks/useAxiosInstance";
@@ -14,7 +10,6 @@ function Signup() {
     // User Context
   const { user, signUpWithEmailPwd, updateUserProfile, signOutUser } = useAuth();
   const axiosInstance = useAxiosInstance();
-
   const navigate = useNavigate();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -111,7 +106,8 @@ function Signup() {
         const signOutResponse = await signOutUser();
 
         //Save registration details to database
-        const res = axiosInstance.post("/users", newUser)
+        const res = await axiosInstance.post("/users", newUser)
+        console.log("I am creating a new user by calling api====================> ")
         
         setProcessing(false)
         toast.success("Signup success!", { autoClose: 2000 });
