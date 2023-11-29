@@ -28,6 +28,7 @@ import AddClass from "../pages/Dashboard/Trainers/AddClass/AddClass";
 import TrainerBooking from "../pages/Trainer/TrainerBooking/TrainerBooking";
 import Payment from "../pages/Payment/Payment";
 import TrainerPayment from "../pages/Dashboard/Admin/Payment/TrainerPayment";
+import SlotBookedDetails from "../pages/Dashboard/Trainers/ManageSlots/SlotBookedDetails";
 
 const router = createBrowserRouter([
   {
@@ -141,6 +142,10 @@ const router = createBrowserRouter([
       {
         path:"/dashboard/trainer-payment/:trainerId",
         element:<PrivateRoute><TrainerPayment></TrainerPayment></PrivateRoute>
+      },
+      {
+        path:"/dashboard/slotBooked-details",
+        element:<PrivateRoute><SlotBookedDetails></SlotBookedDetails></PrivateRoute>
       },
     ]
   }

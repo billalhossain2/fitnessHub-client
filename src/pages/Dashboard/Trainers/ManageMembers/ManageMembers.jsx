@@ -33,8 +33,6 @@ const ManageMembers = () => {
               <th>#</th>
               <th>Name</th>
               <th>Email</th>
-              <th>Booked Slot</th>
-              <th>Package</th>
             </tr>
           </thead>
           <tbody>
@@ -44,8 +42,6 @@ const ManageMembers = () => {
                 <th>{index+1}</th>
                 <td>{member.memberName}</td>
                 <td>{member.memberEmail}</td>
-                <td>{member.bookedSlot}</td>
-                <td>{member.plan}</td>
               </tr>
             ))}
           </tbody>

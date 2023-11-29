@@ -100,7 +100,7 @@ const Forums = () => {
           </button>
         ))}
         <button onClick={handleNextPage}>Next</button>
-        <select
+        {/* <select
           className="bg-[#FF4D31] px-5 py-3 text-white rounded-md"
           value={itemsPerPage}
           onChange={handleItemsPerPage}
@@ -111,7 +111,7 @@ const Forums = () => {
           <option value="10">15</option>
           <option value="20">20</option>
           <option value="50">30</option>
-        </select>
+        </select> */}
       </div>
     </div>
   );
