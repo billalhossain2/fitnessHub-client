@@ -1,12 +1,25 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import useTitle from '../../../../hooks/useTitle'
 import TableRow from './TableRow'
-import useLoadData from '../../../../hooks/useLoadData'
 import Spinner from '../../../../components/Spinner'
+import useAxiosSecure from '../../../../hooks/useAxiosSecure'
 
 const AllTrainers = () => {
   useTitle("FitnessHub | All Trainers")
-  const {loading, error, data:allTrainers} = useLoadData("applied-trainers?application=accepted")
+  const axiosSecure = useAxiosSecure();
+  
+  const [allTrainers, setAllTrainers] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+
+  useEffect(()=>{
+    axiosSecure.get("applied-trainers?application=accepted")
+    .then(res =>{
+      setAllTrainers(res.data);
+      setLoading(false)
+    })
+  }, [])
+
   
   return (
     <div className="bg-gray-100 w-full h-full">
