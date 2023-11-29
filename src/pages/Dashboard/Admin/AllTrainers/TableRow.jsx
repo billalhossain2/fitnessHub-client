@@ -1,9 +1,20 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import getMonthsWorkedSalary from '../../../../utils/getMonthsWorkedSalary';
+import { toast } from 'react-toastify';
 
 const TableRow = ({trainer, index}) => {
-    const {_id, name, image, specialization, phone, email, status} = trainer || {};
+  const navigate = useNavigate();
+    const {_id, name, joined_date, image, salary, specialization, phone, email, status} = trainer || {};
     const handlePay = ()=>{
+      const paymentSalary = getMonthsWorkedSalary(joined_date, salary)
+
+      if(paymentSalary <= 0){
+        toast.warn("Payment is not allowed because he/she joined recently.", {autoClose:3000})
+        return;
+      }
+
+      navigate(`/dashboard/trainer-payment/${_id}`)
     }
   return (
     <tr>
@@ -24,9 +35,7 @@ const TableRow = ({trainer, index}) => {
     <td>{email}</td>
     <td>{status === "paid" ? <span className='font-bold bg-green-500 text-white px-4 py-1 rounded-md font-bold'>Paid</span> : <span className='bg-orange-500 font-bold text-white px-2 py-1 rounded-md'>Pending</span>}</td>
     <th>
-       <Link to={`/dashboard/trainer-payment/${_id}`}>
        <button disabled={status==="paid" ? true : false} onClick={handlePay} className="border-[1px] border-[#C8D96F] text-gray-800 px-4 py-2 hover:bg-[#525D1D] hover:text-white rounded-md duration-300">Pay</button>
-       </Link>
     </th>
   </tr>
   )

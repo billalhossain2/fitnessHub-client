@@ -1,338 +1,79 @@
 [
-    {
-      "title": "Introduction to Fitness",
-      "content": "Hello, fitness enthusiasts! Let's discuss various workout routines, diet plans, and share our fitness journeys. What's your favorite workout?",
-      "author": "FitnessFanatic123",
-      "date": "2023-11-25",
-      "image": "https://i.ibb.co/N7yYmJn/nutrition-muscle-building.jpg",
-      "likes": 0,
-      "emails": []
-    },
-    {
-      "title": "Yoga for Beginners",
-      "content": "Looking to start practicing yoga? Join this thread to get tips on beginner-friendly yoga poses, breathing techniques, and recommended yoga mats.",
-      "author": "ZenYogi",
-      "date": "2023-11-25",
-      "image": "https://i.ibb.co/tPX3Xr4/strength.jpg",
-      "likes": 0,
-      "emails": []
-    },
-    {
-      "title": "Nutrition Tips for Muscle Gain",
-      "content": "Share your favorite recipes and nutrition tips for building muscle. Let's discuss the best sources of protein and effective meal plans for bulking.",
-      "author": "MuscleChef",
-      "date": "2023-11-25",
-      "image": "https://i.ibb.co/N7yYmJn/nutrition-muscle-building.jpg",
-      "likes": 0,
-      "emails": []
-    },
-    {
-      "title": "HIIT Workouts Challenge",
-      "content": "Join the HIIT workouts challenge! Share your favorite high-intensity interval training routines and track your progress. Let's motivate each other!",
-      "author": "HIITWarrior",
-      "date": "2023-11-25",
-      "image": "https://i.ibb.co/SVnj5R6/meditation.png",
-      "likes": 0,
-      "emails": []
-    },
-    {
-      "title": "Pilates for Core Strength",
-      "content": "Discuss Pilates exercises that target core strength and flexibility. Share your favorite Pilates routines and tips for improving posture.",
-      "author": "PilatesPro",
-      "date": "2023-11-25",
-      "image": "https://i.ibb.co/N7yYmJn/nutrition-muscle-building.jpg",
-      "likes": 0,
-      "emails": []
-    },
-    {
-      "title": "Running Enthusiasts Club",
-      "content": "Calling all runners! Join the running enthusiasts club to share your running experiences, training plans, and favorite running routes.",
-      "author": "RunForever",
-      "date": "2023-11-26",
-      "image": "https://i.ibb.co/tPX3Xr4/strength.jpg",
-      "likes": 0,
-      "emails": []
-    },
-    {
-      "title": "Mindfulness Meditation",
-      "content": "Explore the benefits of mindfulness meditation. Share meditation techniques, mindfulness apps, and discuss the impact of mindfulness on mental well-being.",
-      "author": "MindfulSoul",
-      "date": "2023-11-26",
-      "image": "https://i.ibb.co/SVnj5R6/meditation.png",
-      "likes": 0,
-      "emails": []
-    },
-    {
-      "title": "Cycling Adventures",
-      "content": "Love cycling? Share your cycling adventures, tips on bike maintenance, and recommendations for scenic cycling routes. Let's pedal together!",
-      "author": "CycleExplorer",
-      "date": "2023-11-26",
-      "image": "https://i.ibb.co/HhHvzdN/fitness.jpg",
-      "likes": 0,
-      "emails": []
-    },
-    {
-      "title": "CrossFit Challenges",
-      "content": "Embark on CrossFit challenges! Discuss CrossFit workouts, techniques, and share your achievements. Set new fitness goals and crush them!",
-      "author": "CrossFitChamp",
-      "date": "2023-11-26",
-      "image": "https://i.ibb.co/N7yYmJn/nutrition-muscle-building.jpg",
-      "likes": 0,
-      "emails": []
-    },
-    {
-      "title": "Rest and Recovery",
-      "content": "Rest and recovery are essential! Share your favorite recovery strategies, relaxation techniques, and discuss the importance of a good night's sleep.",
-      "author": "RecoveryGuru",
-      "date": "2023-11-26",
-      "image": "https://i.ibb.co/tPX3Xr4/strength.jpg",
-      "likes": 0,
-      "emails": []
-    },
-    {
-      "title": "Vegetarian Fitness",
-      "content": "Are you a vegetarian fitness enthusiast? Share your favorite plant-based recipes, protein sources, and tips for meeting nutritional needs without meat.",
-      "author": "PlantPowered",
-      "date": "2023-11-27",
-      "image": "https://i.ibb.co/SVnj5R6/meditation.png",
-      "likes": 0,
-      "emails": []
-    },
-    {
-      "title": "Bodyweight Workouts",
-      "content": "Discuss effective bodyweight workouts that can be done anywhere. Share your favorite bodyweight exercises and routines for strength and flexibility.",
-      "author": "BodyweightWarrior",
-      "date": "2023-11-27",
-      "image": "https://i.ibb.co/N7yYmJn/nutrition-muscle-building.jpg",
-      "likes": 0,
-      "emails": []
-    },
-    {
-      "title": "Fitness Challenges",
-      "content": "Challenge yourself and others with new fitness goals! Share your fitness challenges, track progress, and celebrate achievements together.",
-      "author": "ChallengeAccepted",
-      "date": "2023-11-27",
-      "image": "https://i.ibb.co/HhHvzdN/fitness.jpg",
-      "likes": 0,
-      "emails": []
-    },
-    {
-      "title": "Healthy Cooking Recipes",
-      "content": "Share and explore healthy cooking recipes. Discuss meal prep tips, cooking techniques, and flavorful recipes that align with your fitness goals.",
-      "author": "CookingEnthusiast",
-      "date": "2023-11-27",
-      "image": "https://i.ibb.co/SVnj5R6/meditation.png",
-      "likes": 0,
-      "emails": []
-    },
-    {
-      "title": "Cardiovascular Health",
-      "content": "Discuss tips and strategies for maintaining cardiovascular health. Share your favorite cardio workouts, routines, and experiences with heart-healthy living.",
-      "author": "HeartHealthHero",
-      "date": "2023-11-28",
-      "image": "https://i.ibb.co/HhHvzdN/fitness.jpg",
-      "likes": 0,
-      "emails": []
-    },
-    {
-      "title": "Outdoor Fitness Adventures",
-      "content": "Love outdoor workouts? Share your experiences with outdoor fitness adventures, hiking trails, and tips for staying active in nature.",
-      "author": "OutdoorExplorer",
-      "date": "2023-11-28",
-      "image": "https://i.ibb.co/N7yYmJn/nutrition-muscle-building.jpg",
-      "likes": 0,
-      "emails": []
-    },
-    {
-      "title": "Mind-Body Connection",
-      "content": "Explore the mind-body connection in fitness. Discuss the impact of mental well-being on physical health and share mindfulness practices.",
-      "author": "MindBodyHarmony",
-      "date": "2023-11-28",
-      "image": "https://i.ibb.co/SVnj5R6/meditation.png",
-      "likes": 0,
-      "emails": []
-    },
-    {
-      "title": "Strength Training Tips",
-      "content": "Share and learn strength training tips. Discuss proper form, effective exercises, and personalized strength training programs for various fitness levels.",
-      "author": "StrengthTrainingGuru",
-      "date": "2023-11-28",
-      "image": "https://i.ibb.co/HhHvzdN/fitness.jpg",
-      "likes": 0,
-      "emails": []
-    },
-    {
-      "title": "Mental Wellness Journey",
-      "content": "Embark on a mental wellness journey. Share personal experiences, coping strategies, and resources for mental well-being in the fitness community.",
-      "author": "WellnessExplorer",
-      "date": "2023-11-29",
-      "image": "https://i.ibb.co/tPX3Xr4/strength.jpg",
-      "likes": 0,
-      "emails": []
-    },
-    {
-      "title": "Functional Fitness Workouts",
-      "content": "Discuss the benefits of functional fitness workouts. Share exercises that improve everyday movements and enhance overall functional strength.",
-      "author": "FunctionalFitFan",
-      "date": "2023-11-29",
-      "image": "https://i.ibb.co/N7yYmJn/nutrition-muscle-building.jpg",
-      "likes": 0,
-      "emails": []
-    },
-    {
-      "title": "Hydration Tips for Athletes",
-      "content": "Stay hydrated! Share and learn hydration tips for athletes. Discuss the importance of water intake and strategies for optimal hydration during workouts.",
-      "author": "HydrationPro",
-      "date": "2023-11-29",
-      "image": "https://i.ibb.co/HhHvzdN/fitness.jpg",
-      "likes": 0,
-      "emails": []
-    },
-    {
-      "title": "Post-Workout Recovery",
-      "content": "Optimize your post-workout recovery! Share and explore effective recovery strategies, from stretching routines to nutrition tips for muscle recovery.",
-      "author": "RecoveryChampion",
-      "date": "2023-11-29",
-      "image": "https://i.ibb.co/SVnj5R6/meditation.png",
-      "likes": 0,
-      "emails": []
-    },
-    {
-      "title": "Motivational Fitness Quotes",
-      "content": "Share your favorite motivational fitness quotes. Inspire and be inspired by uplifting words that fuel your determination on the fitness journey.",
-      "author": "MotivationMaster",
-      "date": "2023-11-30",
-      "image": "https://i.ibb.co/tPX3Xr4/strength.jpg",
-      "likes": 0,
-      "emails": []
-    },
-    {
-        "title": "Circuit Training Circles",
-        "content": "Join the circuit training circles! Discuss circuit workouts, share your favorite exercises, and explore how circuit training can boost your overall fitness.",
-        "author": "CircuitChampion",
-        "date": "2023-11-30",
-        "image": "https://i.ibb.co/SVnj5R6/meditation.png",
-        "likes": 0,
-        "emails": []
-      },
-      {
-
-        "title": "Meditative Movements",
-        "content": "Explore the combination of meditation and movement. Share practices that blend mindfulness with physical activity for a holistic approach to well-being.",
-        "author": "MeditationMover",
-        "date": "2023-12-01",
-        "image": "https://i.ibb.co/tPX3Xr4/strength.jpg",
-        "likes": 0,
-        "emails": []
-      },
-      {
-
-        "title": "Vegan Fitness Lifestyle",
-        "content": "Embrace a vegan fitness lifestyle! Share tips on plant-based nutrition, cruelty-free workout gear, and connect with fellow vegan fitness enthusiasts.",
-        "author": "VeganAthlete",
-        "date": "2023-12-01",
-        "image": "https://i.ibb.co/HhHvzdN/fitness.jpg",
-        "likes": 0,
-        "emails": []
-      },
-      {
-
-        "title": "Swimming for Fitness",
-        "content": "Dive into the world of swimming for fitness. Share swimming routines, tips on improving strokes, and discuss the benefits of aquatic workouts.",
-        "author": "SwimFitExplorer",
-        "date": "2023-12-01",
-        "image": "https://i.ibb.co/N7yYmJn/nutrition-muscle-building.jpg",
-        "likes": 0,
-        "emails": []
-      },
-      {
-
-        "title": "Balanced Nutrition Discussions",
-        "content": "Join discussions on balanced nutrition. Share insights into creating well-rounded meals, understanding macronutrients, and maintaining a healthy diet.",
-        "author": "NutritionNavigator",
-        "date": "2023-12-02",
-        "image": "https://i.ibb.co/SVnj5R6/meditation.png",
-        "likes": 0,
-        "emails": []
-      },
-      {
-
-        "title": "Trail Running Adventures",
-        "content": "Calling all trail runners! Share your trail running adventures, trail recommendations, and tips on conquering different terrains while enjoying nature.",
-        "author": "TrailBlazerRunner",
-        "date": "2023-12-02",
-        "image": "https://i.ibb.co/tPX3Xr4/strength.jpg",
-        "likes": 0,
-        "emails": []
-      },
-      {
-
-        "title": "Body and Mind Retreats",
-        "content": "Explore body and mind retreats for holistic well-being. Share your experiences with retreats, from yoga retreats to wellness getaways.",
-        "author": "RetreatExplorer",
-        "date": "2023-12-02",
-        "image": "https://i.ibb.co/HhHvzdN/fitness.jpg",
-        "likes": 0,
-        "emails": []
-      },
-      {
-
-        "title": "Powerlifting Passion",
-        "content": "Connect with fellow powerlifters! Share powerlifting tips, discuss strength programs, and celebrate personal records in the world of heavy lifting.",
-        "author": "PowerliftingPro",
-        "date": "2023-12-03",
-        "image": "https://i.ibb.co/N7yYmJn/nutrition-muscle-building.jpg",
-        "likes": 0,
-        "emails": []
-      },
-      {
-
-        "title": "Active Travel Stories",
-        "content": "Share your active travel stories. Discuss fitness-friendly travel destinations, workout routines on the go, and staying active while exploring the world.",
-        "author": "TravelFitExplorer",
-        "date": "2023-12-03",
-        "image": "https://i.ibb.co/SVnj5R6/meditation.png",
-        "likes": 0,
-        "emails": []
-      },
-      {
-
-        "title": "Aerial Fitness Fun",
-        "content": "Experience the thrill of aerial fitness! Share tips on aerial silks, hoops, and pole fitness. Connect with others who love defying gravity in their workouts.",
-        "author": "AerialAdventurer",
-        "date": "2023-12-03",
-        "image": "https://i.ibb.co/tPX3Xr4/strength.jpg",
-        "likes": 0,
-        "emails": []
-      },
-      {
-
-        "title": "Keto Fitness Lifestyle",
-        "content": "Explore the intersection of keto and fitness. Share keto-friendly workout snacks, discuss the impact of ketosis on workouts, and connect with keto enthusiasts.",
-        "author": "KetoFitExplorer",
-        "date": "2023-12-04",
-        "image": "https://i.ibb.co/HhHvzdN/fitness.jpg",
-        "likes": 0,
-        "emails": []
-      },
-      {
-
-        "title": "Rebounding Workouts",
-        "content": "Bounce into fitness with rebounding workouts! Share mini-trampoline exercises, discuss the benefits of rebounding, and connect with fellow rebounders.",
-        "author": "ReboundEnthusiast",
-        "date": "2023-12-04",
-        "image": "https://i.ibb.co/N7yYmJn/nutrition-muscle-building.jpg",
-        "likes": 0,
-        "emails": []
-      },
-      {
-
-        "title": "Fitness Book Club",
-        "content": "Combine the love for reading with fitness! Join our fitness book club, share book recommendations, and discuss how literature inspires your fitness journey.",
-        "author": "BookwormFitness",
-        "date": "2023-12-04",
-        "image": "https://i.ibb.co/SVnj5R6/meditation.png",
-        "likes": 0,
-        "emails": []
-      }
+  {
+    "instructor": "Jane Doe",
+    "category": "Yoga Flow",
+    "location": "FitnessHub Studio",
+    "price": "150",
+    "startDate": "2023-11-29",
+    "startTime": "10:00 AM - 11:00 AM",
+    "classTitle": "Energizing Yoga",
+    "description": "Immerse yourself in the serenity of Energizing Yoga, guided by the skilled instructor Jane Doe. This class is a harmonious blend of breath, movement, and mindfulness, creating a transformative experience for both body and mind. Held at FitnessHub Studio, the calming atmosphere provides the perfect setting for your yoga journey.\\n\\nEnergizing Yoga focuses on dynamic sequences that enhance flexibility, strength, and balance. Jane Doe's soothing voice and expert guidance will lead you through a series of poses, promoting physical well-being and mental clarity. Whether you're a seasoned yogi or a beginner, this class offers variations for all levels.\\n\\nJoin us on December 2nd from 10:00 AM to 11:00 AM for a rejuvenating session of Energizing Yoga. Discover the benefits of connecting breath with movement, and leave the class feeling refreshed, revitalized, and ready to face the day.",
+    "image": "https://i.ibb.co/9GS9H5j/fitness.jpg"
+  },
+  {
+    "instructor": "Siam Ahmed",
+    "category": "Energy Boost",
+    "location": "Tomchom, Comilla",
+    "price": "200",
+    "startDate": "2023-12-07",
+    "startTime": "10:00 AM - 11:00 AM",
+    "classTitle": "Energy Boosting Training",
+    "description": "Elevate your energy levels with the expertise of instructor Siam Ahmed in this invigorating Energy Boosting Training. Held in the picturesque location of Tomchom, Comilla, this class combines dynamic movements and motivational coaching to enhance your physical stamina and mental focus. Suitable for all fitness levels, Siam Ahmed's training will leave you feeling empowered and ready to conquer your day.\\n\\nJoin us on December 7th from 10:00 AM to 11:00 AM and experience the transformation of your energy levels. Get ready to unleash your full potential.",
+    "image": "https://i.ibb.co/JndpMjL/yoga-instructor.jpg"
+  },
+  {
+    "instructor": "Mia Johnson",
+    "category": "HIIT",
+    "location": "CityFit Gym",
+    "price": "180",
+    "startDate": "2023-12-10",
+    "startTime": "6:00 PM - 7:00 PM",
+    "classTitle": "High-Intensity Interval Training (HIIT)",
+    "description": "Challenge yourself with Mia Johnson's High-Intensity Interval Training (HIIT) at CityFit Gym. This class is designed to push your limits, combining short bursts of intense exercise with periods of rest to maximize calorie burn and improve cardiovascular fitness. Mia's energetic coaching style will keep you motivated throughout the session. Whether you're a fitness enthusiast or a beginner, HIIT is a time-efficient way to achieve your fitness goals.\\n\\nJoin us on December 10th from 6:00 PM to 7:00 PM and experience the power of HIIT. Get ready to sweat and transform your body.",
+    "image": "https://i.ibb.co/3Wp9HpH/nutritionist.jpg"
+  },
+  {
+    "instructor": "Carlos Rodriguez",
+    "category": "Pilates",
+    "location": "Zen Wellness Center",
+    "price": "160",
+    "startDate": "2023-12-15",
+    "startTime": "9:30 AM - 10:30 AM",
+    "classTitle": "Mindful Pilates",
+    "description": "Embark on a journey of mindfulness and core strength with Carlos Rodriguez's Mindful Pilates at Zen Wellness Center. This class focuses on controlled movements, breath awareness, and precision to enhance your flexibility, posture, and overall well-being. Carlos's expert guidance makes Pilates accessible to all levels, providing a space for both relaxation and strength building.\\n\\nJoin us on December 15th from 9:30 AM to 10:30 AM and experience the transformative benefits of Mindful Pilates. Strengthen your body and calm your mind.",
+    "image": "https://i.ibb.co/xjkx8ZX/fitness-trainer.jpg"
+  },
+  {
+    "instructor": "Emily White",
+    "category": "Cardio Dance",
+    "location": "Dance Fusion Studio",
+    "price": "170",
+    "startDate": "2023-12-20",
+    "startTime": "7:00 PM - 8:00 PM",
+    "classTitle": "Energetic Cardio Dance",
+    "description": "Dance your way to fitness with Emily White's Energetic Cardio Dance at Dance Fusion Studio. This class combines upbeat music with fun and dynamic dance routines to elevate your heart rate and boost your cardiovascular endurance. Emily's infectious energy will make every session feel like a dance party. No dance experience is required - just bring your enthusiasm and get ready to move!\\n\\nJoin us on December 20th from 7:00 PM to 8:00 PM and experience the joy of Cardio Dance. It's not just a workout; it's a celebration!",
+    "image": "https://i.ibb.co/7Jv70sd/wellness-couch.jpg"
+  },
+  {
+    "instructor": "Alexandra Chen",
+    "category": "Meditation",
+    "location": "Tranquil Mind Center",
+    "price": "120",
+    "startDate": "2023-12-25",
+    "startTime": "8:00 AM - 9:00 AM",
+    "classTitle": "Guided Meditation",
+    "description": "Nurture your inner peace with Alexandra Chen's Guided Meditation at Tranquil Mind Center. This class offers a serene escape from the hustle and bustle, allowing you to explore various meditation techniques for relaxation and mindfulness. Alexandra's gentle guidance will help you find tranquility and balance in your daily life. No experience is necessary; everyone is welcome to join this journey of self-discovery.\\n\\nJoin us on December 25th from 8:00 AM to 9:00 AM and experience the transformative power of Guided Meditation. Embrace the present moment and cultivate a peaceful mind.",
+    "image": "https://i.ibb.co/JndpMjL/yoga-instructor.jpg"
+  },
+  {
+    "instructor": "David Brown",
+    "category": "Strength Training",
+    "location": "Powerhouse Fitness",
+    "price": "190",
+    "startDate": "2023-12-30",
+    "startTime": "11:00 AM - 12:00 PM",
+    "classTitle": "Total Body Strength",
+    "description": "Build strength and sculpt your body with David Brown's Total Body Strength class at Powerhouse Fitness. This session combines resistance training with functional movements to target all major muscle groups. Whether you're a fitness enthusiast or new to strength training, David's adaptable approach ensures a challenging yet accessible workout. Join us and embark on a journey to a stronger, healthier you.\\n\\nJoin us on December 30th from 11:00 AM to 12:00 PM and experience the benefits of Total Body Strength. Unlock your full potential and achieve your fitness goals.",
+    "image": "https://i.ibb.co/FYgTg8W/strength-training.jpg"
+  }
 ]

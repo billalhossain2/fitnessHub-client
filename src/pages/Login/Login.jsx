@@ -101,7 +101,7 @@ function Login() {
             <input
               type="email"
               id="email"
-              className={`w-full outline-none p-2 border px-3 ${emailError ? 'border-red-500' : 'border-gray-300'}`}
+              className={` w-full p-2 border px-3 ${emailError ? 'border-red-500' : 'border-gray-500'}`}
               value={email}
               onChange={handleEmailChange}
             />
@@ -113,7 +113,7 @@ function Login() {
               <input
                 type={showPassword ? 'text' : 'password'}
                 id="password"
-                className={`w-full outline-none p-2 px-3 border ${passwordError ? 'border-red-500' : 'border-gray-300'}`}
+                className={` w-full p-2 px-3 border ${passwordError ? 'border-red-500' : 'border-gray-500'}`}
                 value={password}
                 onChange={handlePasswordChange}
               />

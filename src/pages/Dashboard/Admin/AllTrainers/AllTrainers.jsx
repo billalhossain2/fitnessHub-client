@@ -2,10 +2,15 @@ import React from 'react'
 import useTitle from '../../../../hooks/useTitle'
 import TableRow from './TableRow'
 import useLoadData from '../../../../hooks/useLoadData'
+import Spinner from '../../../../components/Spinner'
 
 const AllTrainers = () => {
   useTitle("FitnessHub | All Trainers")
   const {loading, error, data:allTrainers} = useLoadData("applied-trainers?application=accepted")
+  
+  if(loading){
+    return <Spinner></Spinner>
+  }
 
   return (
     <div className="bg-gray-100 w-full h-full">
@@ -14,7 +19,7 @@ const AllTrainers = () => {
     {/* Users Table  */}
     <div className="overflow-x-auto w-[90%] mx-auto">
       <div className="mb-8">
-        <h3 className="md:text-2xl font-semibold">Total Trainers: 0</h3>
+        <h3 className="md:text-2xl font-semibold">Total Trainers: {allTrainers?.length}</h3>
       </div>
       {/* Trainer Table  */}
       <div className="overflow-x-auto">

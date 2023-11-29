@@ -28,6 +28,7 @@ const CheckoutForm = ({paidAmount, trainerEmail, trainerId}) => {
 
   useEffect(()=>{
     if(paidAmount && paidAmount > 0){
+      console.log("I am inside payment effect")
         axiosSecure.post("/create-payment-intent", {price:paidAmount})
     .then(res =>{
         console.log("Client secret=======> ", res.data)
