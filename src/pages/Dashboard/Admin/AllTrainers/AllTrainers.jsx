@@ -8,16 +8,13 @@ const AllTrainers = () => {
   useTitle("FitnessHub | All Trainers")
   const {loading, error, data:allTrainers} = useLoadData("applied-trainers?application=accepted")
   
-  if(loading){
-    return <Spinner></Spinner>
-  }
-
   return (
     <div className="bg-gray-100 w-full h-full">
     <h3 className='lg:text-5xl md:text-4xl text-3xl font-bold text-center my-10'>All Trainers</h3>
 
-    {/* Users Table  */}
-    <div className="overflow-x-auto w-[90%] mx-auto">
+    {/* Trainers Table  */}
+    {
+      loading ? <Spinner></Spinner> : <div className="overflow-x-auto w-[90%] mx-auto">
       <div className="mb-8">
         <h3 className="md:text-2xl font-semibold">Total Trainers: {allTrainers?.length}</h3>
       </div>
@@ -43,6 +40,7 @@ const AllTrainers = () => {
   </table>
 </div>
     </div>
+    }
   </div>
   )
 }

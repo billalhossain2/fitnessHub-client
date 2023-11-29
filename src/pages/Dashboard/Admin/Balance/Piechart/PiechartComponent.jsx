@@ -41,7 +41,7 @@ const PiechartComponent = ({subscirberVsMembers:data}) => {
   return (
     <div className='h-[200px] mt-10'>
       <ResponsiveContainer width="100%" height="100%">
-    <PieChart width={400} height={400}>
+    <PieChart width={300} height={400}>
       <Legend verticalAlign='top' iconType='square' payload={data} content={renderLegend}></Legend>
       <Tooltip></Tooltip>
       <Pie

@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink, Outlet } from "react-router-dom";
+import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
 
 import { MdManageHistory } from "react-icons/md";
 import { FaUsers } from "react-icons/fa";
@@ -10,16 +10,22 @@ import { MdOutlineLocalActivity } from "react-icons/md";
 import { MdOutlineSettings } from "react-icons/md";
 import { SiGoogleclassroom } from "react-icons/si";
 
+import { FaHome } from "react-icons/fa";
+
 import { MdCardMembership } from "react-icons/md";
 import { MdOutlineForum } from "react-icons/md";
 import { GiDiscussion } from "react-icons/gi";
 import useRole from "../hooks/useRole";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import useAuth from "../hooks/useAuth";
 
 const Dashboard = () => {
   // TODO: load dynamic status of user from database
   // const [isAdmin, isAdminLoading] = useAdmin();
+  const {user} = useAuth()
+  const path = useLocation()?.pathname;
+
   const { isLoading, error, data: role } = useRole();
 
   if (isLoading) {
@@ -116,6 +122,8 @@ const Dashboard = () => {
         >
           Open drawer
         </label>
+        {path==="/dashboard" && 
+        <h1 className="text-3xl text-gray-600 font-medium">Welcome Back, {user?.displayName}</h1>}
         <Outlet></Outlet>
       </div>
       <div className="drawer-side">
@@ -127,6 +135,11 @@ const Dashboard = () => {
         <ul className="menu w-80 min-h-full bg-[#C8D96F] p-4">
           {/* Sidebar content here */}
           {role==="admin" ?  adminLinks  : role==="trainer" ? trainerLinks : memberLinks }
+          {/* divider  */}
+          <div className="divider"></div>
+          <Link to="/">
+             <p className="flex gap-1 items-center"><FaHome className="text-2xl"></FaHome>Home</p>
+          </Link> 
         </ul>
       </div>
       <ToastContainer></ToastContainer>

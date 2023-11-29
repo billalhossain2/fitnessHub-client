@@ -6,17 +6,14 @@ import Spinner from '../../../../components/Spinner'
 const AllSubscribers = () => {
   useTitle("FitnessHub | All Subscribers")
   const {loading, error, data:subscribers=[]} = useLoadData("subscriptions");
-
-  if(loading){
-    return <Spinner></Spinner>
-  }
   
   return (
     <div className="bg-gray-100 w-full h-full">
     <h3 className='lg:text-5xl md:text-4xl text-3xl font-bold text-center my-10'>All Subscribers</h3>
 
-    {/* Users Table  */}
-    <div className="overflow-x-auto w-[90%] mx-auto">
+    {/* Subscribers Table  */}
+    {
+      loading ? <Spinner></Spinner> : <div className="overflow-x-auto w-[90%] mx-auto">
       <div className="mb-8">
         <h3 className="md:text-2xl font-semibold">Total Subscribers: {subscribers?.length}</h3>
       </div>
@@ -41,6 +38,7 @@ const AllSubscribers = () => {
         </tbody>
       </table>
     </div>
+    }
   </div>
   )
 }

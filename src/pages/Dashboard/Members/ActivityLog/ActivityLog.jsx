@@ -10,12 +10,17 @@ const ActivityLog = () => {
   const {loading, error, data:bookedTrainer} = useLoadData(`booked-trainers?memberEmail=${user?.email}`);
 
   const {trainerName, trainerEmail, bookedSlot, classes} = bookedTrainer || {};
+
+  if(!bookedTrainer){
+    return <h1 className='text-2xl font-medium text-gray-600'>You have no activity yet!</h1>
+  }
+
   return (
     <div>
       <h3 className='text-2xl font-medium my-3'>Today's Activity</h3>
    {
     loading ? <Spinner></Spinner> : <div className="overflow-x-auto">
-    <table className="table">
+     <table className="table">
       {/* head */}
       <thead className='bg-[#707e2c] text-white'>
         <tr>
