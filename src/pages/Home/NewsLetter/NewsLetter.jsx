@@ -21,10 +21,10 @@ const NewsLetter = () => {
     }
   };
   return (
-    <div className="border-[1px] border-gray-400 flex flex-col items-center justify-center py-5 mt-32 rounded-md">
-      <h3 className="pl-5 font-bold md:text-3xl text-2xl">NEWSLETTER SUBSCRIPTION</h3>
+    <div className="border-[1px] border-gray-400 flex flex-col items-center justify-center py-5 mt-32 rounded-md pb-10">
+      <h3 className="pl-5 font-bold md:text-3xl text-2xl my-5">NEWSLETTER SUBSCRIPTION</h3>
       <form
-        className=""
+        className="flex flex-col gap-5"
         onSubmit={handleSubscribe}
       >
         <input

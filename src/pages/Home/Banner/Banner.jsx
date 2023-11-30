@@ -12,8 +12,8 @@ const Banner = () => {
       <div className="absolute top-0 flex flex-col justify-center bg-black bg-opacity-80 w-full h-full">
       <div className="space-y-10 md:ml-10 ml-3">
         <h3 className="text-5xl font-bold md:text-6xl">
-          <span className="text-white">Shape</span> <br />{" "}
-          <span className="text-[#FF4D31]">Your Body</span>
+          <p className="text-white mb-1">Shape</p>
+          <p className="text-[#FF4D31]">Your Body</p>
         </h3>
         <p className="text-gray-200 md:w-[400px] w-full">
           Transform your body with our 'FitnessHub' service. Unleash your

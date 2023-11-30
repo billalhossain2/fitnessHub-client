@@ -101,7 +101,7 @@ const TrainerForm = () => {
             name="name"
             value={formData.name}
             onChange={handleInputChange}
-            className="w-full mt-1 p-2 border rounded-md"
+            className="w-full mt-1 p-2 border-[1px] border-gray-300 rounded-md"
             required
           />
         </div>
@@ -115,7 +115,7 @@ const TrainerForm = () => {
             id="email"
             name="email"
             value={user?.email}
-            className="w-full mt-1 p-2 border rounded-md bg-gray-100"
+            className="w-full mt-1 p-2 border-[1px] border-gray-300 rounded-md bg-gray-100"
             readOnly
           />
         </div>
@@ -130,7 +130,7 @@ const TrainerForm = () => {
             name="phone"
             value={formData?.phone}
             onChange={handleInputChange}
-            className="w-full mt-1 p-2 border rounded-md"
+            className="w-full mt-1 p-2 border-[1px] border-gray-300 rounded-md"
           />
         </div>
 
@@ -144,7 +144,7 @@ const TrainerForm = () => {
             name="experience"
             value={formData.experience}
             onChange={handleInputChange}
-            className="w-full mt-1 p-2 border rounded-md"
+            className="w-full mt-1 p-2 border-[1px] border-gray-300 rounded-md"
           />
         </div>
 
@@ -159,7 +159,7 @@ const TrainerForm = () => {
             name="joined_date"
             value={formData.joined_date}
             onChange={handleInputChange}
-            className="w-full mt-1 p-2 border rounded-md"
+            className="w-full mt-1 p-2 border-[1px] border-gray-300 rounded-md"
           />
         </div>
 
@@ -174,7 +174,7 @@ const TrainerForm = () => {
             value={formData.salary}
             onChange={handleInputChange}
             placeholder='$ Monthly Expected Salary '
-            className="w-full mt-1 p-2 border rounded-md"
+            className="w-full mt-1 p-2 border-[1px] border-gray-300 rounded-md"
           />
         </div>
 
@@ -188,7 +188,7 @@ const TrainerForm = () => {
             name="age"
             value={formData.age}
             onChange={handleInputChange}
-            className="w-full mt-1 p-2 border rounded-md"
+            className="w-full mt-1 p-2 border-[1px] border-gray-300 rounded-md"
             required
           />
         </div>
@@ -203,7 +203,7 @@ const TrainerForm = () => {
             name="specialization"
             value={formData.specialization}
             onChange={handleInputChange}
-            className="w-full mt-1 p-2 border rounded-md"
+            className="w-full mt-1 p-2 border-[1px] border-gray-300 rounded-md"
             required
           />
         </div>
@@ -216,12 +216,12 @@ const TrainerForm = () => {
             type="file"
             id="image"
             name="image"
-            className="w-full mt-1 p-2 border rounded-md"
+            className="w-full mt-1 p-2 border-[1px] border-gray-300 rounded-md"
           />
         </div>
 
         <div className="mb-4">
-          <label className="block text-sm font-semibold text-gray-600">Choose Skills</label>
+          <label className="block text-sm font-semibold text-gray-600 mb-2">Choose Skills</label>
           <div className="flex flex-col gap-2">
             <label className="mr-4">
               <input
@@ -261,7 +261,7 @@ const TrainerForm = () => {
         </div>
 
         <div className="mb-4">
-          <label htmlFor="availableTimeWeek" className="block text-sm font-semibold text-gray-600">
+          <label htmlFor="availableTimeWeek" className="block text-sm font-bold mb-2 text-gray-600">
            Choose Available Times in a Week
           </label>
           <div className='flex flex-col gap-1'>
@@ -289,7 +289,7 @@ const TrainerForm = () => {
         </div>
 
         <div className="mb-4">
-          <label htmlFor="availableTimeDay" className="block text-sm font-semibold text-gray-600">
+          <label htmlFor="availableTimeDay" className="block text-sm font-semibold text-gray-600 mb-2">
            Choose Available Time Slots in a Day
           </label>
           <div className='flex flex-col gap-1'>

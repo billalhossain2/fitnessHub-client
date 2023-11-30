@@ -20,7 +20,7 @@ const Featured = () => {
   return (
     <>
     <SectionTitle title="Key Features"></SectionTitle>
-    <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5'>
+    <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-5'>
       {
         features.map((feature) => <FeaturedItem key={feature._id} feature={feature}></FeaturedItem>)
       }

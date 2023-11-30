@@ -6,7 +6,6 @@ import { toast } from 'react-toastify';
 import useTitle from '../../hooks/useTitle';
 import useAxiosInstance from '../../hooks/useAxiosInstance';
 
-//Pwd:billalHossain*76
 
 function Login() {
   useTitle('FitnessHub | Login')
@@ -98,7 +97,7 @@ function Login() {
             <input
               type="email"
               id="email"
-              className={` w-full p-2 border px-3 ${emailError ? 'border-red-500' : 'border-gray-500'}`}
+              className={` w-full p-2 border-[1px] border-gray-400 rounded-md px-3`}
               value={email}
               onChange={handleEmailChange}
             />
