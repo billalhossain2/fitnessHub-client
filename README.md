@@ -4,7 +4,7 @@
 
 Welcome to FitnessHub, your go-to platform for all your fitness needs! Whether you're a member looking for a personal trainer or a trainer seeking opportunities, FitnessHub has got you covered. Below are some key features and information to help you make the most of your FitnessHub experience.
 
-## Live Link: live link here
+## Live Link: https://fitnesshub-3f0fd.web.app/
 
 ## Features
 

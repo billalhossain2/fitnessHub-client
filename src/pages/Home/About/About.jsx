@@ -21,32 +21,7 @@ const About = () => {
         
         <div className="flex flex-col md:flex-row items-center justify-between gap-5">
           <div className="md:w-1/2 mb-8 md:mb-0">
-        <Swiper
-          spaceBetween={30}
-          centeredSlides={true}
-          autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
-          }}
-          pagination={{
-            clickable: true,
-          }}
-          navigation={false}
-          modules={[Autoplay, Pagination, Navigation]}
-          className="mySwiper"
-        >
-          {images.map((img, index) => (
-            <SwiperSlide key={index}>
-              <div>
-                <img
-                  className="w-full md:h-[400px] h-[300px]"
-                  src={img}
-                  alt="About"
-                />
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+             <img src="https://i.ibb.co/PWKLPYw/about-1.jpg" alt="" />
           </div>
 
           <div className="md:w-1/2">
