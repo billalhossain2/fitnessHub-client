@@ -20,6 +20,14 @@ const ManageMembers = () => {
       });
   }, [user, axiosSecure]);
 
+  if(bookedMembers.length === 0){
+    return (
+      <div>
+         <p className="font-semibold text-2xl text-gray-600">No members are available</p>
+      </div>
+    )
+  }
+
   return (
     <div>
       <h3 className="text-2xl font-semibold text-gray-600 mb-2">Manage Members</h3>

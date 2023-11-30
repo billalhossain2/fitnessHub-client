@@ -4,10 +4,11 @@ import TableRow from './TableRow'
 import Spinner from '../../../../components/Spinner'
 import useAxiosSecure from '../../../../hooks/useAxiosSecure'
 
+
 const AllTrainers = () => {
   useTitle("FitnessHub | All Trainers")
   const axiosSecure = useAxiosSecure();
-  
+
   const [allTrainers, setAllTrainers] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -18,7 +19,7 @@ const AllTrainers = () => {
       setAllTrainers(res.data);
       setLoading(false)
     })
-  }, [])
+  }, [axiosSecure])
 
   
   return (

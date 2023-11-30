@@ -1,14 +1,16 @@
 import axios from "axios";
 import { useEffect } from "react";
 import { useState } from "react"
+import useAxiosSecure from "./useAxiosSecure";
 
 const useLoadData = (endpoint) => {
+  const axiosSecure = useAxiosSecure()
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
   useEffect(()=>{
-    axios.get(`http://localhost:9000/${endpoint}`)
+    axiosSecure.get(`${endpoint}`)
     .then(res => {
       setData(res.data)
       setLoading(false)

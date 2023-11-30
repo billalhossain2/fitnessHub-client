@@ -5,7 +5,6 @@ const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
 
 
 const renderLegend = (props) => {
-  console.log("From render legend", props)
   const { payload } = props;
 
   return (

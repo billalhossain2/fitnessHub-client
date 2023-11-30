@@ -29,6 +29,9 @@ import TrainerBooking from "../pages/Trainer/TrainerBooking/TrainerBooking";
 import Payment from "../pages/Payment/Payment";
 import TrainerPayment from "../pages/Dashboard/Admin/Payment/TrainerPayment";
 import SlotBookedDetails from "../pages/Dashboard/Trainers/ManageSlots/SlotBookedDetails";
+import AdminRoute from "./AdminRoute";
+import TrainerRoute from "./TrainerRoute";
+import AdminTrainer from "./AdminTrainer";
 
 const router = createBrowserRouter([
   {
@@ -97,19 +100,23 @@ const router = createBrowserRouter([
     children:[
       {
         path:"/dashboard/all-subscribers",
-        element:<AllSubscribers></AllSubscribers>
+        element:<AdminRoute><AllSubscribers></AllSubscribers></AdminRoute>
       },
       {
         path:"/dashboard/all-trainers",
-        element:<AllTrainers></AllTrainers>
+        element:<AdminRoute><AllTrainers></AllTrainers></AdminRoute>
       },
       {
         path:"/dashboard/applied-trainers",
-        element:<AppliedTrainers></AppliedTrainers>
+        element:<AdminRoute><AppliedTrainers></AppliedTrainers></AdminRoute>
+      },
+      {
+        path:"/dashboard/trainer-payment/:trainerId",
+        element:<AdminRoute><TrainerPayment></TrainerPayment></AdminRoute>
       },
       {
         path:"/dashboard/balance",
-        element:<Balance></Balance>
+        element:<AdminRoute><Balance></Balance></AdminRoute>
       },
       {
         path:"/dashboard/activity-log",
@@ -125,27 +132,23 @@ const router = createBrowserRouter([
       },
       {
         path:"/dashboard/manage-slots",
-        element:<ManageSlots></ManageSlots>
+        element:<TrainerRoute><ManageSlots></ManageSlots></TrainerRoute>
       },
       {
         path:"/dashboard/manage-members",
-        element:<ManageMembers></ManageMembers>
+        element:<TrainerRoute><ManageMembers></ManageMembers></TrainerRoute>
       },
       {
         path:"/dashboard/add-new-forum",
-        element:<AddForum></AddForum>
+        element:<AdminTrainer><AddForum></AddForum></AdminTrainer>
       },
       {
         path:"/dashboard/add-new-class",
-        element:<AddClass></AddClass>
-      },
-      {
-        path:"/dashboard/trainer-payment/:trainerId",
-        element:<PrivateRoute><TrainerPayment></TrainerPayment></PrivateRoute>
+        element:<TrainerRoute><AddClass></AddClass></TrainerRoute>
       },
       {
         path:"/dashboard/slotBooked-details",
-        element:<PrivateRoute><SlotBookedDetails></SlotBookedDetails></PrivateRoute>
+        element:<TrainerRoute><SlotBookedDetails></SlotBookedDetails></TrainerRoute>
       },
     ]
   }

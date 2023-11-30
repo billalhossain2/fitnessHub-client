@@ -6,6 +6,7 @@ import Spinner from "../../../../components/Spinner";
 import { useNavigate } from "react-router-dom";
 
 import { FaRegClock } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 const ManageSlots = () => {
   useTitle("FitnessHub | Manage Members");
@@ -23,9 +24,13 @@ const ManageSlots = () => {
       .get(`members-booked?trainerEmail=${user?.email}`)
       .then((res) => {
         setBookedMembers(res.data);
-        setTrainerId(res.data[0].trainerId)
+        setTrainerId(res.data[0]?.trainerId)
         setLoading(false)
-      });
+      })
+      .catch(error => {
+        toast.error(error.message, {autoClose:2000})
+        setLoading(false);
+      })
   }, [user, axiosSecure]);
 
 

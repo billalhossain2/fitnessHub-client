@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import useTitle from '../../../../hooks/useTitle'
 import TableRow from './TableRow'
-import useLoadData from '../../../../hooks/useLoadData'
 import useAppliedTrainers from '../../../../hooks/useAppliedTrainers'
 import Spinner from '../../../../components/Spinner'
 

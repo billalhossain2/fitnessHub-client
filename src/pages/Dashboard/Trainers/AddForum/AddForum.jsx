@@ -57,7 +57,7 @@ const AddForum = () => {
 
         axiosSecure.post('/forums', newForum)
         .then(res =>{
-          toast.success('Added a new class successfully', {autoClose:2000})
+          toast.success('Added a new forum successfully', {autoClose:2000})
         })
       }
     })
@@ -66,7 +66,7 @@ const AddForum = () => {
 
   return (
     <div className="max-w-[600px]  my-10">
-      <h3 className='lg:text-4xl md:text-3xl text-2xl font-bold text-center my-10 text-gray-500'>Add A New Class</h3>
+      <h3 className='lg:text-4xl md:text-3xl text-2xl font-bold text-center my-10 text-gray-500'>Add A New Forum</h3>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div className="grid md:grid-cols-2 grid-cols-1 gap-5">
         <div>

@@ -3,7 +3,7 @@ import Error from "../../components/Error";
 import Spinner from "../../components/Spinner";
 import useTitle from "../../hooks/useTitle";
 import ForumItem from "./ForumItem";
-import "./Forums.css"
+import "./Forums.css";
 import { useQuery } from "@tanstack/react-query";
 import useAxiosInstance from "../../hooks/useAxiosInstance";
 const Forums = () => {
@@ -18,8 +18,8 @@ const Forums = () => {
   const [itemsPerPage, setItemsPerPage] = useState(6);
   const [count, setCount] = useState(0);
 
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState('')
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
 
   const numberOfPages = Math.ceil(count / itemsPerPage);
 
@@ -45,27 +45,26 @@ const Forums = () => {
   };
 
   useEffect(() => {
-    fetch("http://localhost:9000/forums")
+    fetch("https://assignment-12-server-six-gamma.vercel.app/forums")
       .then((res) => res.json())
       .then((data) => setCount(data.length));
   }, []);
 
-
   useEffect(() => {
-    setLoading(true)
+    setLoading(true);
     fetch(
-      `http://localhost:9000/forums?page=${currentPage}&size=${itemsPerPage}`
+      `https://assignment-12-server-six-gamma.vercel.app/forums?page=${currentPage}&size=${itemsPerPage}`
     )
       .then((res) => res.json())
       .then((data) => {
-        setForums(data)
-        setLoading(false)
-        setError("")
+        setForums(data);
+        setLoading(false);
+        setError("");
       });
   }, [currentPage, itemsPerPage, refetch]);
 
-  if(loading){
-    return <Spinner></Spinner>
+  if (loading) {
+    return <Spinner></Spinner>;
   }
 
   return (
@@ -83,7 +82,11 @@ const Forums = () => {
 
       <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 mt-10">
         {forums.map((forum) => (
-          <ForumItem key={forum._id} forum={forum} setRefetch={setRefetch}></ForumItem>
+          <ForumItem
+            key={forum._id}
+            forum={forum}
+            setRefetch={setRefetch}
+          ></ForumItem>
         ))}
       </div>
 
@@ -92,11 +95,13 @@ const Forums = () => {
         <button onClick={handlePrevPage}>Prev</button>
         {pages.map((page) => (
           <button
-            className={`${currentPage === page ? "bg-[#FF4D31] text-white" : undefined} mx-1 border-[#FF4D31] border-[1px] px-5 py-2 rounded-md text-[#FF4D31]`}
+            className={`${
+              currentPage === page ? "bg-[#FF4D31] text-white" : undefined
+            } mx-1 border-[#FF4D31] border-[1px] px-5 py-2 rounded-md text-[#FF4D31]`}
             onClick={() => setCurrentPage(page)}
             key={page}
           >
-            {page+1}
+            {page + 1}
           </button>
         ))}
         <button onClick={handleNextPage}>Next</button>

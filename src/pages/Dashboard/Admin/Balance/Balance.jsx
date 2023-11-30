@@ -1,14 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import useTitle from "../../../../hooks/useTitle";
-import { useQuery } from "@tanstack/react-query";
 import useAxiosSecure from "../../../../hooks/useAxiosSecure";
-import useBalance from "../../../../hooks/useBalance";
 import getTotalBalance from "../../../../utils/getTotalBalance";
-import useTrainerPayments from "../../../../hooks/useTrainerPayments";
 import getTotalTrainerPayments from "../../../../utils/getTotalTrainerPayments";
 import PiechartComponent from "./Piechart/PiechartComponent";
 import moment from "moment/moment";
-import Spinner from "../../../../components/Spinner";
 
 import { FaBalanceScale } from "react-icons/fa";
 import { MdPayment } from "react-icons/md";
@@ -18,25 +14,39 @@ const Balance = () => {
   const axiosSecure = useAxiosSecure();
 
 
-  //Get All Subscribers
-  const {isLoading:subscriberLoading, data:subscribers, refetch} = useQuery({
-    queryKey:["TOTAL_NEWS_LETTER"],
-    queryFn:async()=>{
-      const res = await axiosSecure.get("/subscriptions");
-      return res.data;
-    }
-  })
+  //Using native methods
+  const [subscribers, setSubscribers] = useState([])
+  const [paidMembers, setPaidMembers] = useState([])
+  const [trainerPayments, setTrainerPayments] = useState([])
+
+  // Get all subscribers 
+  useEffect(()=>{
+    axiosSecure.get("/subscriptions")
+    .then(res => {
+      setSubscribers(res.data)
+    })
+  }, [])
+
+
+// Get all paid members 
+  useEffect(()=>{
+    axiosSecure.get("/booking-payments")
+    .then(res => {
+      setPaidMembers(res.data)
+    })
+  }, [])
 
 
 
-  //Get All Paid Members
-  const {isLoading:membersLoading,data:paidMembers} = useQuery({
-    queryKey:["ALL_PAID_MEMBERS"],
-    queryFn:async()=>{
-      const res = await axiosSecure.get("/booking-payments");
-      return res.data;
-    }
-  })
+  // Get all trainer payments 
+  useEffect(()=>{
+    axiosSecure.get("/trainer-payments")
+    .then(res => {
+      setTrainerPayments(res.data)
+    })
+  }, [])
+
+  
 
   const subscirberVsMembers = [
     {
@@ -50,18 +60,14 @@ const Balance = () => {
   ]
 
 
-  const {isLoading:balanceLoading, data:bookingPayments} = useBalance();
-  const {data:trainerPayments} = useTrainerPayments();
-
   const totalTrainerPayments = getTotalTrainerPayments(trainerPayments)
-  const totalRemainingBalance = getTotalBalance(bookingPayments, totalTrainerPayments);
+  const totalRemainingBalance = getTotalBalance(paidMembers, totalTrainerPayments);
 
 
 
   return (
     <div>
-      {
-        balanceLoading ? <Spinner></Spinner> : <div className="grid md:grid-cols-2 grid-cols-1 gap-5 mt-5">
+        <div className="grid md:grid-cols-2 grid-cols-1 gap-5 mt-5">
         <div className="bg-[#707e2a] p-3 rounded-md text-center text-white space-y-2">
           <div className="flex justify-center"><FaBalanceScale className="text-5xl"/></div>
           <h3 className="font-bold text-xl">Remaining Balance</h3>
@@ -74,7 +80,6 @@ const Balance = () => {
           <p className="text-3xl font-bold">${totalTrainerPayments}</p>
         </div>
       </div>
-      }
 
 
       {/* Pie chart  */}
@@ -84,8 +89,8 @@ const Balance = () => {
 
       {/* 6 members who paid  */}
       <div className="text-2xl font-bold text-gray-600 text-center mt-10">Paid Members</div>
-      {
-        membersLoading ? <Spinner></Spinner> : <table className="border border-slate-400 mt-1 mb-10">
+      
+      <table className="border border-slate-400 mt-1 mb-10">
         <thead className="bg-[#707e2a] mt-10 text-white">
           <th className="p-5 font-bold text-[20px]">Email</th>
           <th className="p-5 font-bold text-[20px]">Paid</th>
@@ -103,7 +108,6 @@ const Balance = () => {
             }
         </tbody>
       </table>
-      }
       
     </div>
   );
