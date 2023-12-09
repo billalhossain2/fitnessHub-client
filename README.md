@@ -63,7 +63,7 @@ The user interface is designed with user experience in mind, providing an intuit
 
 ### Installation
 1. Clone the repository:
-git clone https://github.com/your-username/fitnesshub.git
+git clone https://github.com/billalhossain2/fitnessHub-client.git
 
 2. Install dependencies:
 cd fitnesshub
