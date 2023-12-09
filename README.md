@@ -1,13 +1,11 @@
 # FitnessHub Readme
 
 ## Introduction
-
 Welcome to FitnessHub, your go-to platform for all your fitness needs! Whether you're a member looking for a personal trainer or a trainer seeking opportunities, FitnessHub has got you covered. Below are some key features and information to help you make the most of your FitnessHub experience.
 
 ## Live Link: https://fitnesshub-3f0fd.web.app/
 
 ## Features
-
 - User Authentication:
 
 Every user, including members, trainers, and admins, must authenticate to access their personalized dashboards and features.
@@ -49,7 +47,6 @@ FitnessHub is built on a fullstack architecture, combining the power of React, T
 The user interface is designed with user experience in mind, providing an intuitive and visually appealing platform for easy navigation.
 
 ## Technologies Used:
-
 - React
 - Tailwind CSS
 - Express Js
@@ -79,7 +76,7 @@ REACT_APP_FIREBASE_API_KEY=YOUR_FIREBASE_API_KEY
 REACT_APP_FIREBASE_AUTH_DOMAIN=YOUR_FIREBASE_AUTH_DOMAIN
 #Add any other configuration variables
 
-# Usage
+## Usage
 1. Start the development server:
 npm start
 
